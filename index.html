@@ -6,7 +6,19 @@
 </head>
 <body>
 <script>
-    
+  fetch('https://api.exchangeratesapi.io/latest')
+      .then(function(vastaus){
+        return vastaus.json();
+      }).then(function(json){
+    getExchangeRates(json);
+  }).catch(function(error){
+    console.log(error);
+  });
+  // Do currency conversion in this function
+  function getExchangeRates(kurssit) {
+    console.log(kurssit);
+    return kurssit;
+  }
 </script>
 </body>
 </html>
