@@ -5,10 +5,34 @@
     <title>Valuuttamuunnin</title>
 </head>
 <body>
+<button onclick="testi1()">testi</button>
 <script>
-    if (foo) {
-      bar();
-    }
+  let kurssit;
+  fetch('https://api.exchangeratesapi.io/latest')
+      .then(function(vastaus){
+        return vastaus.json();
+      }).then(function(json){
+    convertCurrency(json);
+    kurssit = json;
+  }).catch(function(error){
+    console.log(error);
+  });
+  // Do currency conversion in this function
+  function convertCurrency(kurssit) {
+    console.log(kurssit);
+  }
 </script>
+<p id="kello">
+    <script>
+      let time;
+      const p = document.querySelector('#kello');
+      function updateTime() {
+        time = new Date();
+        p.innerText = "Päiväys on: " + time.toLocaleString();
+      }
+      setInterval(updateTime, 1000);
+    </script>
+</p>
+
 </body>
 </html>
