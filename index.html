@@ -5,22 +5,19 @@
     <title>Valuuttamuunnin</title>
 </head>
 <body>
-<button onclick="testi1()">testi</button>
 <script>
-  let kurssit;
+  var currencyData
+
   fetch('https://api.exchangeratesapi.io/latest')
-      .then(function(vastaus){
-        return vastaus.json();
-      }).then(function(json){
-    convertCurrency(json);
-    kurssit = json;
-  }).catch(function(error){
+  .then(function(response) {
+    return response.json();
+  }).then(function(json) {
+    currencyData = json
+    console.log(currencyData);
+  }).catch(function(error) {
     console.log(error);
   });
-  // Do currency conversion in this function
-  function convertCurrency(kurssit) {
-    console.log(kurssit);
-  }
+  // Hae data currencyData-muuttujasta syntaksilla currencyData.rates['USD']
 </script>
 <p id="kello">
     <script>
