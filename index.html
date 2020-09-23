@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-  var currencyData
+  var currencyData;
 
   fetch('https://api.exchangeratesapi.io/latest')
   .then(function(response) {
@@ -25,7 +25,7 @@
       const p = document.querySelector('#kello');
       function updateTime() {
         time = new Date();
-        p.innerText = "Päiväys on: " + time.toLocaleString();
+        p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty:" + currencyData.date;
       }
       setInterval(updateTime, 1000);
     </script>
