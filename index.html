@@ -8,8 +8,6 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-=======
 <div class="container">
     <div class="header">
         <h1>Valuuttamuunnin PRO</h1>
@@ -23,7 +21,7 @@
             <button id="currencies2" onclick="show()" class="dropbtn">Valuutat2</button>
         </div>
         <div class="button">
-            <button id="convert">Convert</button>
+            <button id="convert" onclick="convert()">Convert</button>
         </div>
     </ul>
 
@@ -34,8 +32,9 @@
 
 
 <script>
+  // Author of this script: Jere
+  // Fetch the currency data from open API offered by Central Bank of Europe
   var currencyData
-
   fetch('https://api.exchangeratesapi.io/latest')
   .then(function(response) {
     return response.json();
@@ -45,7 +44,13 @@
   }).catch(function(error) {
     console.log(error);
   });
-  // Hae data currencyData-muuttujasta syntaksilla currencyData.rates['USD']
+  function convert() {
+    var sum = document.getElementById('euro').value;
+    parseFloat(sum);
+    document.write(sum * currencyData.rates['USD']);
+    // Temporarily hardcoded to USD
+  }
+  // Get data from currencyData-variable with syntax: currencyData.rates['USD']
 </script>
 <p id="kello">
     <script>
