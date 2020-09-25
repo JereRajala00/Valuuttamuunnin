@@ -17,20 +17,18 @@
         <div class="currencyInput">
             <input id="euro" type="number" placeholder="EUR">
         </div>
-
-        <div class="dropdown">
-            <button id="currencies1" onclick="show()" class="dropbtn">Valuutat1</button>
-            <div id="dd1" class="dropdown-content">
-                <a href="http://www.fitnesstukku.fi"> FT </a>
-            </div>
-        </div>
-
-        <div class="dropdown2">
-            <button id="currencies2" onclick="show2()" class="dropbtn2">Valuutat2</button>
-            <div id="dd2" class="dropdown-content2">
-                <a href="http://www.fitnesstukku.fi"> FT2 </a>
-            </div>
-        </div>
+        <select name="drop1" id="Currency1">
+            <option id="testi" value="eur1">EUR</option>
+            <option value="usd1">USD</option>
+            <option value="aud1">AUD</option>
+            <option value="cad1">CAD</option>
+        </select>
+        <select name="drop2" id="Currency2">
+            <option value="eur2">EUR</option>
+            <option value="usd2">USD</option>
+            <option value="aud2">AUD</option>
+            <option value="cad2">CAD</option>
+        </select>
 
         <div class="button">
             <button id="convert" onclick="convert()">Convert</button>
@@ -59,8 +57,9 @@
   function convert() {
     var sum = document.getElementById('euro').value;
     parseFloat(sum);
-    document.write(sum * currencyData.rates['USD']);
-    // Temporarily hardcoded to USD
+    if (document.getElementById("testi").value == "true") {
+      alert("test: eur is selected");
+    }
   }
   // Get data from currencyData-variable with syntax: currencyData.rates['USD']
 </script>
