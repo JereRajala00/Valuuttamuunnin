@@ -1,0 +1,65 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E0FBFC;
+    color: #000000;
+}
+.container{
+    width: 500px;
+    margin: 20px auto;
+}
+.header {
+    background-color: #7776BC;
+    text-align: center;
+}
+.header h1{
+    font-size: 35px;
+}
+.header p{
+    margin-top: 8px;
+    font-size: 14px;
+}
+ul.currencies{
+    height:500px;
+    background-color: #001427;
+}
+.currencyInput{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+    width: 90%;
+    margin: 0 auto;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+    width: 10%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#euro, #dollar{
+    margin: 0 auto;
+    margin-top: 40px;
+    border: none;
+    padding: 20px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    width: 430px;
+    box-shadow: 0px 1px 5px rgb(97,97,97);
+}
+#currencies1, #currencies2{
+    margin: 0 auto;
+    margin-top: 40px;
+    border: none;
+    padding: 20px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    width: 430px;
+    box-shadow: 0px 1px 5px rgb(97,97,97);
+}
