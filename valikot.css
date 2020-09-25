@@ -55,17 +55,7 @@ ul.currencies{
     width: 430px;
     box-shadow: 0px 1px 5px rgb(97,97,97);
 }
-#currencies1, #currencies2{
-    margin: 0 auto;
-    margin-top: 40px;
-    border: none;
-    padding: 20px 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    width: 430px;
-    box-shadow: 0px 1px 5px rgb(97,97,97);
-}
+
 
 .dropdown {
     position: relative;
@@ -81,6 +71,28 @@ ul.currencies{
     z-index: 1;
 }
 .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.show {display:block;}
+
+/*dropdown 2 valikko*/
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content2{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content2 a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
