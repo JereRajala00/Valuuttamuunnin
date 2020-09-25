@@ -16,10 +16,22 @@
     <ul class="currencies">
         <div class="currencyInput">
             <input id="euro" type="number" placeholder="EUR">
-            <input id="dollar" type="number" placeholder="USD">
-            <button id="currencies1" onclick="show()" class="dropbtn">Valuutat1</button>
-            <button id="currencies2" onclick="show()" class="dropbtn">Valuutat2</button>
         </div>
+
+        <div class="dropdown">
+            <button id="currencies1" onclick="show()" class="dropbtn">Valuutat1</button>
+            <div id="dd1" class="dropdown-content">
+                <a href="http://www.fitnesstukku.fi"> FT </a>
+            </div>
+        </div>
+
+        <div class="dropdown2">
+            <button id="currencies2" onclick="show2()" class="dropbtn2">Valuutat2</button>
+            <div id="dd2" class="dropdown-content2">
+                <a href="http://www.fitnesstukku.fi"> FT2 </a>
+            </div>
+        </div>
+
         <div class="button">
             <button id="convert" onclick="convert()">Convert</button>
         </div>
