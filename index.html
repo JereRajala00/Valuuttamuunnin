@@ -9,11 +9,11 @@
 </head>
 <body>
 <div class="container">
-    <div class="header">
-        <h1>Valuuttamuunnin PRO</h1>
-        <p>Rahaa!</p>
-    </div>
-    <ul class="currencies">
+        <header>Valuuttamuunnin PRO
+            <p>Rahaa!</p>
+        </header>
+
+    <article class="main">
         <div class="currencyInput">
             <input id="euro" type="number" placeholder="EUR">
         </div>
@@ -32,9 +32,9 @@
         </select>
 
         <div class="button">
-            <button id="convert" onclick="convert()">Convert</button>
+            <button id="convertButton" onclick="convert()">Convert</button>
         </div>
-    </ul>
+    </article>
 
 </div>
 
@@ -64,6 +64,8 @@
   }
   // Get data from currencyData-variable with syntax: currencyData.rates['USD']
 </script>
+
+<footer>
 <p id="kello">
     <script>
       let time;
@@ -75,6 +77,7 @@
       setInterval(updateTime, 1000);
     </script>
 </p>
+</footer>
 
 </body>
 </html>
