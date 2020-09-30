@@ -11,39 +11,39 @@
 </head>
 <body>
 <div class="container">
-    <div class="header">
-        <h1>Valuuttamuunnin PRO</h1>
-        <p>Rahaa!</p>
-    </div>
-    <ul class="currencies">
+        <header>Valuuttamuunnin PRO
+            <p>Rahaa!</p>
+        </header>
+
+    <article class="main">
         <div class="currencyInput">
             <input id="euro" type="number" placeholder="EUR">
         </div>
-
-        <div class="dropdown">
-            <button id="currencies1" onclick="show()" class="dropbtn">Valuutat1</button>
-            <div id="dd1" class="dropdown-content">
-                <a href="http://www.fitnesstukku.fi"> FT </a>
-            </div>
-        </div>
-
-        <div class="dropdown2">
-            <button id="currencies2" onclick="show2()" class="dropbtn2">Valuutat2</button>
-            <div id="dd2" class="dropdown-content2">
-                <a href="http://www.fitnesstukku.fi"> FT2 </a>
-            </div>
-        </div>
+        <select name="drop1" id="Currency1">
+            <option id="testi" value="eur1">EUR</option>
+            <option value="usd1">USD</option>
+            <option value="aud1">AUD</option>
+            <option value="cad1">CAD</option>
+        </select>
+        <button id="swap" onclick="swap()"><img src="swapmini.png"> </button>
+        <select name="drop2" id="Currency2">
+            <option value="eur2">EUR</option>
+            <option value="usd2">USD</option>
+            <option value="aud2">AUD</option>
+            <option value="cad2">CAD</option>
+        </select>
 
         <div class="button">
             <button id="convert">Convert</button>
         </div>
-    </ul>
+    </article>
 
 </div>
 
 <script>
-  var currencyData;
-
+  // Author of this script: Jere
+  // Fetch the currency data from open API offered by Central Bank of Europe
+  var currencyData
   fetch('https://api.exchangeratesapi.io/latest')
   .then(function(response) {
     return response.json();
@@ -64,7 +64,7 @@
     <script src="map.js"></script>
 </div>
 
-
+<footer>
 <p id="kello">
     <script>
       let time;
@@ -76,6 +76,7 @@
       setInterval(updateTime, 1000);
     </script>
 </p>
+</footer>
 
 </body>
 </html>
