@@ -39,6 +39,7 @@ function setLocations(locationData) {
 
       } catch (error) {
         console.log(error);
+
       }
     }
   }
