@@ -3,25 +3,30 @@
         padding : 0;
         box-sizing: border-box;
     }
-body{
-    background-color: #E0FBFC;
-    color: #000000;
-}
+
 .container{
-    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
     margin: 0px auto;
 }
 header {
     background-color: #7776BC;
     text-align: center;
     font-size: 35px;
+    color:white;
+    background: url('kuva.jpg');
+    background-size: cover;
+    height: 150px;
+    width:100%;
 }
+
 header p{
     margin-top: 8px;
     font-size: 14px;
 }
 article.main{
-    height:500px;
+    height:600px;
+    width:100%;
     background-color: #001427;
     display: block;
     text-align:center;
@@ -64,4 +69,10 @@ article.main{
     font-size: 15px;
     width: 430px;
     box-shadow: 0px 1px 5px rgb(97,97,97);
+}
+
+footer{
+    heigth:10%;
+    width:100%;
+    margin:0;
 }
