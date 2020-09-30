@@ -10,13 +10,12 @@
     margin: 0px auto;
 }
 header {
-    background-color: #7776BC;
     text-align: center;
     font-size: 35px;
     color:white;
     background: url('kuva.jpg');
     background-size: cover;
-    height: 150px;
+    height: 200px;
     width:100%;
 }
 
@@ -24,19 +23,32 @@ header p{
     margin-top: 8px;
     font-size: 14px;
 }
+
+article.commercies1{
+        width:25%;
+        background: url("eimainoksia.png");
+}
+
 article.main{
     height:600px;
-    width:100%;
+    width:50%;
     background-color: #737471;
     display: block;
     text-align:center;
 }
+
+article.commercies2{
+        width:25%;
+        background: url("eimainoksia.png");
+}
 .currencyInput{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    margin-top:150px;
 }
+
 
 #Currency1, #Currency2  {
     margin-top:40px;
@@ -67,7 +79,7 @@ article.main{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 15px;
-    width: 430px;
+    width: 290px;
     box-shadow: 0px 1px 5px rgb(97,97,97);
 }
 
@@ -75,4 +87,5 @@ footer{
     heigth:10%;
     width:100%;
     margin:0;
+    background: #FFFFFF;
 }
