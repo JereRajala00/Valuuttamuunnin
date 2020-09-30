@@ -1,3 +1,4 @@
+//Author of this file is Tiitus
 function fetchLocationData(currency) {
   fetch('https://restcountries.eu/rest/v2/all?fields=name;latlng;currencies')
   .then(function(response) {
@@ -32,7 +33,7 @@ function setLocations(locationData) {
     if (locationData[i] != '') {
       try {
         let location = L.latLng(parseFloat(locationData[i].latlng[0]), parseFloat(locationData[i].latlng[1]));
-        console.log(locationData[i].currencies[0].name)
+
         setTimeout(function() {
           markers[i] = new L.marker(location).addTo(map).
               bindPopup(locationData[i].name + ', currency: ' + locationData[i].currencies[0].name + ', code: ' + locationData[i].currencies[0].code + ',symbol: ' + locationData[i].currencies[0].symbol)
