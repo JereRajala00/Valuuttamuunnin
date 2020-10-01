@@ -1,60 +1,50 @@
-    *{
-        margin : 0;
-        padding : 0;
-        box-sizing: border-box;
-    }
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
 body{
     background-color: #E0FBFC;
     color: #000000;
 }
 .container{
-    width: 100%;
-    margin: 0px auto;
+    width: 500px;
+    margin: 20px auto;
 }
-header {
+.header {
     background-color: #7776BC;
     text-align: center;
+}
+.header h1{
     font-size: 35px;
 }
-header p{
+.header p{
     margin-top: 8px;
     font-size: 14px;
 }
-article.main{
+ul.currencies{
     height:500px;
     background-color: #001427;
-    display: block;
-    text-align:center;
 }
 .currencyInput{
     display: flex;
     flex-direction: column;
+    margin: 15px 0px;
     width: 90%;
     margin: 0 auto;
 }
 
-#Currency1, #Currency2  {
-    margin-top:40px;
-    margin-left:20px;
-    margin-right:20px;
-    height:25px;
-}
-
 /*convertbutton*/
-#convertButton{
+.button{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
     width: 10%;
-    margin: 30px 0px;
-    height: 25px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
-#swap {
-    image-rendering: auto;
-    width: 10%;
-    height: 25px;
-    background-color: white;
-}
-
-#euro{
+#euro, #dollar{
     margin: 0 auto;
     margin-top: 40px;
     border: none;
@@ -65,3 +55,47 @@ article.main{
     width: 430px;
     box-shadow: 0px 1px 5px rgb(97,97,97);
 }
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.show {display:block;}
+
+/*dropdown 2 valikko*/
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content2{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.show {display:block;}

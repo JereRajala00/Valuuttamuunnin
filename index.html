@@ -11,51 +11,31 @@
 </head>
 <body>
 <div class="container">
-        <header>Valuuttamuunnin PRO
-            <p>Rahaa!</p>
-        </header>
-
-    <article class="main">
+    <div class="header">
+        <h1>Valuuttamuunnin PRO</h1>
+        <p>Rahaa!</p>
+    </div>
+    <ul class="currencies">
         <div class="currencyInput">
-            <input id="euro" type="number" placeholder="EUR">
+            <input id="cash_to_be_converted" type="number" placeholder="EUR">
         </div>
-        <select name="drop1" id="Currency1">
-            <option id="testi" value="eur1">EUR</option>
-            <option value="usd1">USD</option>
-            <option value="aud1">AUD</option>
-            <option value="cad1">CAD</option>
+        <select name="first_currency" id="dropdown_menu1">
+            <option></option>
         </select>
-        <button id="swap" onclick="swap()"><img src="swapmini.png"> </button>
-        <select name="drop2" id="Currency2">
-            <option value="eur2">EUR</option>
-            <option value="usd2">USD</option>
-            <option value="aud2">AUD</option>
-            <option value="cad2">CAD</option>
+        <select name="second_currency" id="dropdown_menu2">
+            <option></option>
         </select>
 
+        <p id="result" align="center" style="color:white;"></p>
         <div class="button">
             <button id="convert">Convert</button>
         </div>
-    </article>
+    </ul>
 
 </div>
 
-<script>
-  // Author of this script: Jere
-  // Fetch the currency data from open API offered by Central Bank of Europe
-  var currencyData
-  fetch('https://api.exchangeratesapi.io/latest')
-  .then(function(response) {
-    return response.json();
-  }).then(function(json) {
-    currencyData = json;
-    console.log(currencyData);
-  }).catch(function(error) {
-    console.log(error);
-  });
-  // Hae data currencyData-muuttujasta syntaksilla currencyData.rates['USD']
-</script>
 
+<script src="convert.js"></script>
 <!-- haetaan käyttäjän paikkatiedot ja näytetään ne OpenStreetMapin ja Leaflet.js:n avulla -->
 <div id="map" style="width: 100%; height: 400px;">
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -64,7 +44,7 @@
     <script src="map.js"></script>
 </div>
 
-<footer>
+
 <p id="kello">
     <script>
       let time;
@@ -76,7 +56,5 @@
       setInterval(updateTime, 1000);
     </script>
 </p>
-</footer>
-
 </body>
 </html>
