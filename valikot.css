@@ -96,7 +96,22 @@ footer{
     background: #FFFFFF;
 }
 
-a{
-    display:block;
-    color:red;
-}
+a {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 3px;
+        text-decoration: none;
+    }
+a:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 2px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+a:hover:after {
+        width: 85%;
+        background: #3a3937;
+    }
