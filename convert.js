@@ -27,12 +27,9 @@ async function getRates() {
       console.log(sum.length);
       if (sum.length > 0) {
         convert();
-        console.log("Päivää.")
       }
       return response;
-      //else {
-        //addCurrencies();
-      //}
+
   } catch(error) {
     console.log(error);
   }
