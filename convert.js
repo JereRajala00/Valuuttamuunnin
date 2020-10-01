@@ -1,14 +1,28 @@
 // Author of this script: Jere (Getting data for the dropdown list and some ideas and fixes are by Tiitus :)
 // Fetch the currency data from open API offered by Central Bank of Europe
 var currencyData;
+
 window.onload = function () {
   var convertButton = document.getElementById('convert');
   getRates().then(addCurrencies);
   convertButton.addEventListener("click", getRates);
 }
-async function getRates() {
+
+function updatePlaceholder() {
+  var inputField = getSelectedMenuOption();
+  inputField[0].setAttribute('placeholder',inputField[2]);
+}
+
+function getSelectedMenuOption() {
+  var inputField = document.getElementById('cash_to_be_converted');
   var currency1 = document.getElementById('dropdown_menu1');
   var selectedValue = currency1.options[currency1.selectedIndex].innerText;
+
+  var menuOptions = [inputField, currency1, selectedValue]
+  return menuOptions;
+}
+async function getRates() {
+  var selectedValue = getSelectedMenuOption()[2];
   console.log('Base currency: ' + selectedValue);
   let response;
   try {
@@ -36,7 +50,8 @@ async function getRates() {
 }
 
 function convert() {
-  var sum = parseFloat(document.getElementById('cash_to_be_converted').value);
+  var inputField = getSelectedMenuOption()[0];
+  var sum = parseFloat(inputField.value);
   var currency2 = document.getElementById('dropdown_menu2');
   var selectedValue2 = currency2.options[currency2.selectedIndex].innerText;
   console.log('Convert to currency: ' + selectedValue2);
