@@ -79,3 +79,8 @@ function addCurrencies() {
 
 }
 // Get data from currencyData-variable with syntax: currencyData.rates['USD']
+
+/*SWAP BUTTON*/
+swap = document.getElementById("swap");
+
+swap.addEventListener("click");
