@@ -15,8 +15,8 @@ header {
     color:white;
     background: url('kuva.jpg');
     background-size: cover;
-    height: 200px;
-    width:100%;
+    width: 100%;
+    height: auto;
 }
 
 header p {
