@@ -1,8 +1,8 @@
-    *{
-        margin : 0;
-        padding : 0;
-        box-sizing: border-box;
-    }
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
 
 .container{
     display:flex;
@@ -19,17 +19,25 @@ header {
     width:100%;
 }
 
-header p{
+header p {
     margin-top: 130px;
     font-size: 14px;
 }
+.topnav{
+    width:100%;
+    text-align:center;
+}
+.topnav     a{
+    margin: 10px 10px;
+    color: black;
+}
 
-article.commercials1{
+article.commercials1 {
         width:25%;
         background: url("eimainoksia.png");
 }
 
-article.main{
+article.main {
     height:600px;
     width:50%;
     background-color: #3a3937;
@@ -37,11 +45,11 @@ article.main{
     text-align:center;
 }
 
-article.commercials2{
+article.commercials2 {
         width:25%;
         background: url("eimainoksia.png");
 }
-.currencyInput{
+.currencyInput {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -50,7 +58,7 @@ article.commercials2{
 }
 
 
-#Currency1, #Currency2  {
+#dropdown_menu1, #dropdown_menu2  {
     margin-top:40px;
     margin-left:20px;
     margin-right:20px;
@@ -58,7 +66,7 @@ article.commercials2{
 }
 
 /*convertbutton*/
-#convertButton{
+#convert {
     width: 10%;
     margin: 30px 0px;
     height: 25px;
@@ -71,7 +79,7 @@ article.commercials2{
     background-color: white;
 }
 
-#euro{
+#cash_to_be_converted {
     margin: 0 auto;
     margin-top: 40px;
     border: none;
@@ -83,13 +91,13 @@ article.commercials2{
     box-shadow: 0px 1px 5px rgb(97,97,97);
 }
 
-.video{
+.video {
     display: block;
     margin: 0 auto;
     width: 50%;
 }
 
-footer{
+footer {
     heigth:10%;
     width:100%;
     margin:0;
