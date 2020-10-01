@@ -15,8 +15,10 @@
         }
     </style>
 </head>
+<header></header>
 <body>
 <h1>Näin pääset Metropolian Karamalmin toimipisteelle:</h1>
+<p style = "margin-top: 30px;" id = alertText></p>
 <div id="map" class="map">
 <script>
   const options = {
@@ -51,10 +53,30 @@
   }
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
+    if (err = 'User denied Geolocation') {
+      var map = L.map('map');
+      alert("Sijaintia ei saatu. Salli selaimessasi sijainnin antaminen.");
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      L.Routing.control({
+        waypoints: [
+          L.latLng(60.167675, 24.942140),
+          L.latLng(60.223890, 24.758295)
+        ],
+        routeWhileDragging: true,
+        router: L.Routing.mapbox('pk.eyJ1IjoidGFhYW5rIiwiYSI6ImNrZm55bHV5MjJxbGEyeW8zd2kyamNucWcifQ.ZjrFICw6y2JIeQjNGQeraA'),
+        //geocoder: L.Control.Geocoder.nominatim()
+      }).addTo(map);
+      const alertText = document.getElementById('alertText');
+      alertText.innerText = 'Sijaintia ei saatu. Salli sijainnin antaminen.'
+    }
   }
 
   navigator.geolocation.getCurrentPosition(openMap, error, options);
 </script>
+
 </div>
 </body>
 </html>
