@@ -32,7 +32,7 @@ header p {
     color: black;
 }
 
-article.commercials1 {
+aside.commercials1 {
         width:25%;
         background: url("eimainoksia.png");
 }
@@ -45,7 +45,7 @@ article.main {
     text-align:center;
 }
 
-article.commercials2 {
+aside.commercials2 {
         width:25%;
         background: url("eimainoksia.png");
 }
