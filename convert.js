@@ -1,11 +1,11 @@
 // Author of this script: Jere (Getting data for the dropdown list and some ideas and fixes are by Tiitus :)
 // Fetch the currency data from open API offered by Central Bank of Europe
-var currencyData;
+var currencyData; // Get data from currencyData-variable with syntax: currencyData.rates['USD']
 
 window.onload = function () {
   var convertButton = document.getElementById('convert');
-  getRates().then(addCurrencies);
-  convertButton.addEventListener("click", getRates);
+  getRates().then(addCurrencies);                                                 //fetch rates from api when site is load, adds currencies to dropdown menus when get
+  convertButton.addEventListener("click", getRates);                         //fetch rates from api when convert button is clicked
 }
 
 function updatePlaceholder() {
@@ -78,4 +78,3 @@ function addCurrencies() {
   }
 
 }
-// Get data from currencyData-variable with syntax: currencyData.rates['USD']
