@@ -1,0 +1,133 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.7.1/dist/leaflet.css\"\r\n          integrity=\"sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==\"\r\n          crossorigin=\"\"/>\r\n    <link rel=\"stylesheet\" href=\"valikot.css\">\r\n    <title>Valuuttamuunnin PRO</title>\r\n\r\n</head>\r\n<body>\r\n<div class=\"container\">\r\n\r\n     <header>\r\n        Valuuttamuunnin PRO\r\n        <p>Rahaa!</p>\r\n     </header>\r\n\r\n    <article class=\"commercials1\"></article>\r\n\r\n    <article class=\"main\">\r\n\r\n        <div class=\"currencyInput\">\r\n            <input id=\"cash_to_be_converted\" type=\"number\" placeholder=\"EUR\">\r\n        </div>\r\n        <select name=\"first_currency\" id=\"dropdown_menu1\" onchange=\"updatePlaceholder()\">\r\n            <option></option>\r\n        </select>\r\n\r\n        <button id=\"swap\" onclick=\"swap()\"><img src=\"swapmini.png\"> </button>\r\n\r\n        <select name=\"second_currency\" id=\"dropdown_menu2\">\r\n            <option></option>\r\n        </select>\r\n\r\n        <p id=\"result\" align=\"center\"></p>\r\n        <div class=\"button\">\r\n            <button id=\"convert\">Convert</button>\r\n        </div>\r\n\r\n    </article>\r\n\r\n    <article class=\"commercials2\"></article>\r\n\r\n    <article class=\"video\">\r\n        <video id=\"media\" width=\"30%\" controls>\r\n                <source src=\"video.mp4\" type=\"video/mp4\">\r\n        </video>\r\n    </article>\r\n    <article class=\"linkit\">\r\n        <a class=\"videoSuunnittelu\" href=\"https://webdisk.metropolia.fi/htcomnet/Handlers/Download.ashx/Videosuunnittelu.pdf?action=view&file=Home%20drive%2Fpublic_html%2FMEDIAPROJEKTI%2Fvideosuunnittelu/Videosuunnittelu.pdf&date=1601537198924\" target=\"_blank\">Videosuunnittelu</a>\r\n    </article>\r\n\r\n\r\n\r\n</div>\r\n\r\n\r\n<script src=\"convert.js\"></script>\r\n<!-- haetaan käyttäjän paikkatiedot ja näytetään ne OpenStreetMapin ja Leaflet.js:n avulla -->\r\n<div id=\"map\" style=\"width: 100%; height: 400px;\">\r\n    <script src=\"https://unpkg.com/leaflet@1.7.1/dist/leaflet.js\"\r\n            integrity=\"sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==\"\r\n            crossorigin=\"\"></script>\r\n    <script src=\"map.js\"></script>\r\n</div>\r\n\r\n\r\n<p id=\"kello\">\r\n    <script>\r\n      let time;\r\n      const p = document.querySelector('#kello');\r\n      function updateTime() {\r\n        time = new Date();\r\n        p.innerHTML = \"Päiväys on: \" + time.toLocaleString() + \"<br/>Kurssit päivitetty:\" + currencyData.date;\r\n      }\r\n      setInterval(updateTime, 1000);\r\n    </script>\r\n</p>\r\n</footer>\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- index.html	(revision 394ab1650feadded875cae98b221a707c5f3b474)
++++ index.html	(date 1601547071317)
+@@ -12,11 +12,17 @@
+ <body>
+ <div class="container">
+ 
++
+      <header>
+         Valuuttamuunnin PRO
+         <p>Rahaa!</p>
+      </header>
+ 
++    <div class="topnav">
++        <a href="https://webdisk.metropolia.fi/htcomnet/Handlers/Download.ashx/Videosuunnittelu.pdf?action=view&file=Home%20drive%2Fpublic_html%2FMEDIAPROJEKTI%2Fvideosuunnittelu/Videosuunnittelu.pdf&date=1601537198924" target="_blank"">Videon suunnitelma</a>
++        <a href="about.html">Kartta</a>
++    </div>
++
+     <article class="commercials1"></article>
+ 
+     <article class="main">
+@@ -48,10 +54,6 @@
+                 <source src="video.mp4" type="video/mp4">
+         </video>
+     </article>
+-    <article class="linkit">
+-        <a class="videoSuunnittelu" href="https://webdisk.metropolia.fi/htcomnet/Handlers/Download.ashx/Videosuunnittelu.pdf?action=view&file=Home%20drive%2Fpublic_html%2FMEDIAPROJEKTI%2Fvideosuunnittelu/Videosuunnittelu.pdf&date=1601537198924" target="_blank">Videosuunnittelu</a>
+-    </article>
+-
+ 
+ 
+ </div>
+Index: valikot.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>*{\r\n    margin : 0;\r\n    padding : 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.container{\r\n    display:flex;\r\n    flex-wrap:wrap;\r\n    margin: 0px auto;\r\n}\r\nheader {\r\n    text-align: center;\r\n    font-size: 35px;\r\n    color:white;\r\n    background: url('kuva.jpg');\r\n    background-size: cover;\r\n    height: 200px;\r\n    width:100%;\r\n}\r\n\r\nheader p {\r\n    margin-top: 130px;\r\n    font-size: 14px;\r\n}\r\n\r\narticle.commercials1 {\r\n        width:25%;\r\n        background: url(\"eimainoksia.png\");\r\n}\r\n\r\narticle.main {\r\n    height:600px;\r\n    width:50%;\r\n    background-color: #3a3937;\r\n    display: block;\r\n    text-align:center;\r\n}\r\n\r\narticle.commercials2 {\r\n        width:25%;\r\n        background: url(\"eimainoksia.png\");\r\n}\r\n.currencyInput {\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    margin: 0 auto;\r\n    margin-top:150px;\r\n}\r\n\r\n\r\n#dropdown_menu1, #dropdown_menu2  {\r\n    margin-top:40px;\r\n    margin-left:20px;\r\n    margin-right:20px;\r\n    height:25px;\r\n}\r\n\r\n/*convertbutton*/\r\n#convert {\r\n    width: 10%;\r\n    margin: 30px 0px;\r\n    height: 25px;\r\n}\r\n\r\n#swap {\r\n    image-rendering: auto;\r\n    width: 10%;\r\n    height: 25px;\r\n    background-color: white;\r\n}\r\n\r\n#cash_to_be_converted {\r\n    margin: 0 auto;\r\n    margin-top: 40px;\r\n    border: none;\r\n    padding: 20px 20px;\r\n    font-family: 'Montserrat', sans-serif;\r\n    font-weight: bold;\r\n    font-size: 15px;\r\n    width: 290px;\r\n    box-shadow: 0px 1px 5px rgb(97,97,97);\r\n}\r\n\r\n.video {\r\n    display: block;\r\n    margin: 0 auto;\r\n    width: 50%;\r\n}\r\n\r\nfooter {\r\n    heigth:10%;\r\n    width:100%;\r\n    margin:0;\r\n    background: #FFFFFF;\r\n}\r\n\r\na {\r\n        display: inline-block;\r\n        position: relative;\r\n        padding-bottom: 3px;\r\n        text-decoration: none;\r\n    }\r\na:after {\r\n        content: '';\r\n        display: block;\r\n        margin: auto;\r\n        height: 2px;\r\n        width: 0px;\r\n        background: transparent;\r\n        transition: width .5s ease, background-color .5s ease;\r\n    }\r\na:hover:after {\r\n        width: 85%;\r\n        background: #3a3937;\r\n    }\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- valikot.css	(revision 394ab1650feadded875cae98b221a707c5f3b474)
++++ valikot.css	(date 1601547526728)
+@@ -9,12 +9,14 @@
+     flex-wrap:wrap;
+     margin: 0px auto;
+ }
++
+ header {
+     text-align: center;
+     font-size: 35px;
+     color:white;
+-    background: url('kuva.jpg');
++    background: url('kuva3.png');
+     background-size: cover;
++    position:relative;
+     height: 200px;
+     width:100%;
+ }
+@@ -24,6 +26,14 @@
+     font-size: 14px;
+ }
+ 
++.topnav{
++    width:100%;
++    text-align:center;
++    padding:10px 10px;
++}
++.topnav .a{
++    margin:10px 10px;
++}
+ article.commercials1 {
+         width:25%;
+         background: url("eimainoksia.png");
+@@ -41,6 +51,7 @@
+         width:25%;
+         background: url("eimainoksia.png");
+ }
++
+ .currencyInput {
+     display: flex;
+     flex-direction: column;
+@@ -96,6 +107,7 @@
+     background: #FFFFFF;
+ }
+ 
++/*linkit*/
+ a {
+         display: inline-block;
+         position: relative;
+@@ -115,3 +127,4 @@
+         width: 85%;
+         background: #3a3937;
+     }
++/*linkit*/
+\ No newline at end of file
+Index: valikkoJS.js
+===================================================================
+--- valikkoJS.js	(revision 394ab1650feadded875cae98b221a707c5f3b474)
++++ valikkoJS.js	(revision 394ab1650feadded875cae98b221a707c5f3b474)
+@@ -1,2 +0,0 @@
+-
+-
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"a1207c66-8a90-471d-b1d6-25a96db1a9b2\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/valikot.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/valikot.css\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"SET_USER_NAME_GLOBALLY\" value=\"false\" />\r\n  </component>\r\n  <component name=\"GithubDefaultAccount\">\r\n    <option name=\"defaultAccountId\" value=\"4e50879a-9a92-493c-a616-263e8b36e142\" />\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"hiddenUrls\">\r\n      <set>\r\n        <option value=\"https://github.com/JereRajala00/Valuuttamuunnin\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1hokb028IYXFjzOgmglx0zohiCm\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"a1207c66-8a90-471d-b1d6-25a96db1a9b2\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1600684900883</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1600684900883</updated>\r\n      <workItem from=\"1600684902283\" duration=\"143000\" />\r\n      <workItem from=\"1600942653663\" duration=\"3681000\" />\r\n      <workItem from=\"1601027883908\" duration=\"206000\" />\r\n      <workItem from=\"1601276549244\" duration=\"807000\" />\r\n      <workItem from=\"1601278820878\" duration=\"2062000\" />\r\n      <workItem from=\"1601444772741\" duration=\"8748000\" />\r\n    </task>\r\n    <task id=\"LOCAL−00001\" summary=\"koneelle\">\r\n      <created>1601028029997</created>\r\n      <option name=\"number\" value=\"LOCAL−00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00001\" />\r\n      <updated>1601028029997</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00002\" summary=\"Merge branch 'tiitus' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html\">\r\n      <created>1601447983755</created>\r\n      <option name=\"number\" value=\"LOCAL−00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00002\" />\r\n      <updated>1601447983755</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00003\" summary=\"Merge branch 'tiitus' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html\">\r\n      <created>1601450299686</created>\r\n      <option name=\"number\" value=\"LOCAL−00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00003\" />\r\n      <updated>1601450299686</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00004\" summary=\"Merge branch 'tiitus' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html\">\r\n      <created>1601451313900</created>\r\n      <option name=\"number\" value=\"LOCAL−00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00004\" />\r\n      <updated>1601451313900</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00005\" summary=\"Merge branch 'tiitus' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html\">\r\n      <created>1601452763252</created>\r\n      <option name=\"number\" value=\"LOCAL−00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00005\" />\r\n      <updated>1601452763252</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00006\" summary=\"Merge branch 'tiitus' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html\">\r\n      <created>1601453444436</created>\r\n      <option name=\"number\" value=\"LOCAL−00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00006\" />\r\n      <updated>1601453444436</updated>\r\n    </task>\r\n    <task id=\"LOCAL−00007\" summary=\"Merge branch 'tiitus' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html\">\r\n      <created>1601453647247</created>\r\n      <option name=\"number\" value=\"LOCAL−00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL−00007\" />\r\n      <updated>1601453647247</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"koneelle\" />\r\n    <MESSAGE value=\"Merge branch 'tiitus' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html\" />\r\n    <MESSAGE value=\"Merge branch 'jere' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html\" />\r\n    <MESSAGE value=\"Merge branch 'jere' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html&#10;&#9;valikkoJS.js&#10;&#9;valikot.css\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Merge branch 'jere' of https://github.com/JereRajala00/Valuuttamuunnin&#10;&#10; Conflicts:&#10;&#9;index.html&#10;&#9;valikkoJS.js&#10;&#9;valikot.css\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"393\" y=\"0\" key=\"CommitChangelistDialog2\" timestamp=\"1601538410907\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"393\" y=\"0\" key=\"CommitChangelistDialog2/0.0.1536.824@0.0.1536.824\" timestamp=\"1601538410907\" />\r\n    <state x=\"235\" y=\"0\" key=\"MergeDialog\" timestamp=\"1601454585299\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"235\" y=\"0\" key=\"MergeDialog/0.0.1536.824@0.0.1536.824\" timestamp=\"1601454585299\" />\r\n    <state x=\"495\" y=\"89\" key=\"MultipleFileMergeDialog\" timestamp=\"1601454591545\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"495\" y=\"89\" key=\"MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824\" timestamp=\"1601454591545\" />\r\n    <state x=\"277\" y=\"57\" key=\"SettingsEditor\" timestamp=\"1601028091280\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"277\" y=\"57\" key=\"SettingsEditor/0.0.1536.824@0.0.1536.824\" timestamp=\"1601028091280\" />\r\n    <state x=\"361\" y=\"145\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1601538418488\">\r\n      <screen x=\"0\" y=\"0\" width=\"1536\" height=\"824\" />\r\n    </state>\r\n    <state x=\"361\" y=\"145\" key=\"Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824\" timestamp=\"1601538418488\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 394ab1650feadded875cae98b221a707c5f3b474)
++++ .idea/workspace.xml	(date 1601547560129)
+@@ -3,6 +3,8 @@
+   <component name="ChangeListManager">
+     <list default="true" id="a1207c66-8a90-471d-b1d6-25a96db1a9b2" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/valikkoJS.js" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/valikot.css" beforeDir="false" afterPath="$PROJECT_DIR$/valikot.css" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -57,6 +59,7 @@
+       <workItem from="1601276549244" duration="807000" />
+       <workItem from="1601278820878" duration="2062000" />
+       <workItem from="1601444772741" duration="8748000" />
++      <workItem from="1601544669423" duration="2170000" />
+     </task>
+     <task id="LOCAL−00001" summary="koneelle">
+       <created>1601028029997</created>
