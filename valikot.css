@@ -15,10 +15,11 @@ header {
     width:100%;
     height:auto;
     margin:0 auto;
+    background-color: #B5E2FA;
 }
 header img {
     height:auto;
-    width:100%;
+    width:15%;
     margin-left:50%;
     transform: translateX(-50%);
     background-color: #B5E2FA;
@@ -30,8 +31,7 @@ header img {
     text-align:center;
 }
 .topnav     a{
-    padding:3px 3px;
-    margin: 10px 10px;
+    margin: 10px 10px 10px 10px;
     color: black;
 }
 
@@ -45,7 +45,7 @@ aside.ads1 {
 .ads1 img{
     width:90%;
     height: auto;
-    margin: 0px 30px;
+    margin: 0px 15px;
 }
 #ad2{
     margin-top:40px;
@@ -59,14 +59,13 @@ aside.ads2 {
 }
 
 .ads2 img{
+    vertical-align: center;
+    horiz-align: center;
     width:90%;
     height: auto;
-    margin: 0px 30px;
+    margin: 0px 15px 0 15px;
 }
 
-#ad4{
-    margin-top:40px;
-}
 
 article.main {
     display: block;
