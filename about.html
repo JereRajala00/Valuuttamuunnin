@@ -1,3 +1,4 @@
+<!-- Author of this page is Tiitus. This page shows rounting from user location to Metropolia Karamalmi Campus in Espoo -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +32,7 @@
     const crd = pos.coords;
     var map = L.map('map');
 
-    // Tulostetaan paikkatiedot konsoliin
+    // Logs location data to console
     console.log('Your current position is:');
     console.log(`Latitude : ${crd.latitude}`);
     console.log(`Longitude: ${crd.longitude}`);
@@ -48,11 +49,11 @@
         ],
         routeWhileDragging: true,
         router: L.Routing.mapbox('pk.eyJ1IjoidGFhYW5rIiwiYSI6ImNrZm55bHV5MjJxbGEyeW8zd2kyamNucWcifQ.ZjrFICw6y2JIeQjNGQeraA'),
-        //geocoder: L.Control.Geocoder.nominatim()
     }).addTo(map);
   }
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
+    //if user denies to give location, Sets routing from Helsinki Center to metropolia Karamalmi campus
     if (err = 'User denied Geolocation') {
       var map = L.map('map');
       alert("Sijaintia ei saatu. Salli selaimessasi sijainnin antaminen.");
@@ -67,7 +68,7 @@
         ],
         routeWhileDragging: true,
         router: L.Routing.mapbox('pk.eyJ1IjoidGFhYW5rIiwiYSI6ImNrZm55bHV5MjJxbGEyeW8zd2kyamNucWcifQ.ZjrFICw6y2JIeQjNGQeraA'),
-        //geocoder: L.Control.Geocoder.nominatim()
+
       }).addTo(map);
       const alertText = document.getElementById('alertText');
       alertText.innerText = 'Sijaintia ei saatu. Salli sijainnin antaminen.'

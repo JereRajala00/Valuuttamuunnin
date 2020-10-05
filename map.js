@@ -1,5 +1,6 @@
 //Author of this file is Tiitus
-function fetchLocationData(currency) {
+//this function gets country locations, names and currencies from restcountries.eu
+function fetchLocationData() {
   fetch('https://restcountries.eu/rest/v2/all?fields=name;latlng;currencies')
   .then(function(response) {
     return response.json();
@@ -10,19 +11,14 @@ function fetchLocationData(currency) {
   }).catch(function(error) {
     console.log(error);
   });
-}/*function getLocations(countryData) {
+}
 
-  for (let i = 0; i < countryData.length; i++) {
-    locations.push({name:countryData[i].name,currency:countryData[i]['currencies'].name + ', ' + countryData[i]['currencies'].code,latlng:countryData[i].latlng});
-    console.log({name:countryData[i].name,currency:countryData[i].currencies["name"] + ', ' + countryData[i].currencies["code"],latlng:countryData[i].latlng});
-  }
-}*/
 fetchLocationData();
 
-// Funktio, joka ajetaan, kun paikkatiedot on haettu
+// Function is run when data is fetch
 function setLocations(locationData) {
 
-  // Käytetään leaflet.js -kirjastoa näyttämään sijainti kartalla (https://leafletjs.com/)
+  // Uses leaflet.js -library to show location (https://leafletjs.com/)
   const map = L.map('map').setView([0, 0], 3);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -46,7 +42,3 @@ function setLocations(locationData) {
   }
 }
 
-// Funktio, joka ajetaan, jos paikkatietojen hakemisessa tapahtuu virhe
-//function error(err) {
-  //console.warn(`ERROR(${err.code}): ${err.message}`);
-//}

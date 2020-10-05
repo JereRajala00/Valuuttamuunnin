@@ -123,3 +123,6 @@ a:hover:after {
         width: 85%;
         background: #3a3937;
     }
+#result {
+    text-align: center;
+}
