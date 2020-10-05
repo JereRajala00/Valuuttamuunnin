@@ -17,9 +17,15 @@ function getSelectedMenuOption() {
   var inputField = document.getElementById('cash_to_be_converted');
   var currency1 = document.getElementById('dropdown_menu1');
   var selectedValue = currency1.options[currency1.selectedIndex].innerText;
-
   var menuOptions = [inputField, currency1, selectedValue]
   return menuOptions;
+}
+function swap() {
+  var currency1 = document.getElementById('dropdown_menu1');
+  var currency2 = document.getElementById('dropdown_menu2');
+  var firstValue = currency1.options[currency1.selectedIndex];
+  currency1.options[currency1.selectedIndex] = currency2.options[currency2.selectedIndex];
+  currency2.options[currency2.selectedIndex] = firstValue;
 }
 async function getRates() {
   var selectedValue = getSelectedMenuOption()[2];
