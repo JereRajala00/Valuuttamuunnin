@@ -82,5 +82,9 @@ function addCurrencies() {
 
 /*SWAP BUTTON*/
 swap = document.getElementById("swap");
+swap.addEventListener("click", swap_currencies);
 
-swap.addEventListener("click");
+function swap_currencies(evt){
+  alert("moro");
+}
+/*SWAP BUTTON*/

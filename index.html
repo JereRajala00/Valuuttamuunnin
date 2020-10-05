@@ -14,8 +14,7 @@
 
 
      <header>
-        Valuuttamuunnin PRO
-        <p>Rahaa!</p>
+         <img src="logo1.png">
      </header>
 
     <div class="topnav">
@@ -23,7 +22,10 @@
         <a href="about.html">Kartta</a>
     </div>
 
-    <article class="commercials1"></article>
+    <aside class="ads1">
+        <img id="ad1" src="mainos1.png">
+        <img id="ad2" src="mainos2.png">
+    </aside>
 
     <article class="main">
 
@@ -34,7 +36,7 @@
             <option></option>
         </select>
 
-        <button id="swap" onclick="swap()"><img src="swapmini.png"> </button>
+        <button id="swap" onclick="swap_currencies()"><img src="swapmini.png"> </button>
 
         <select name="second_currency" id="dropdown_menu2">
             <option></option>
@@ -47,7 +49,10 @@
 
     </article>
 
-    <article class="commercials2"></article>
+    <aside class="ads2">
+        <img id="ad3" src="mainos1.png">
+        <img id="ad4" src="mainos2.png">
+    </aside>
 
     <article class="video">
         <video id="media" width="30%" controls>
@@ -59,6 +64,7 @@
 </div>
 
 <script src="convert.js"></script>
+
 <!-- haetaan käyttäjän paikkatiedot ja näytetään ne OpenStreetMapin ja Leaflet.js:n avulla -->
 <div id="map" style="width: 100%; height: 400px;">
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -79,7 +85,7 @@
       setInterval(updateTime, 1000);
     </script>
 </p>
-</footer>
+
 
 </body>
 </html>
