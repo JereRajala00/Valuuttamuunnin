@@ -1,7 +1,7 @@
 *{
     margin : 0 auto;
     padding : 0;
-
+    font-family: Arial;
 }
 
 .container{
@@ -11,15 +11,17 @@
     flex-wrap:wrap;
     margin: 0 auto;
 }
+
 header {
     overflow:hidden;
     width:100%;
     height:auto;
     margin:0 auto;
+    background-color: #B5E2FA;
 }
 header img {
     height:auto;
-    width:100%;
+    width:15%;
     margin-left:50%;
     transform: translateX(-50%);
     background-color: #B5E2FA;
@@ -29,24 +31,33 @@ header img {
     height:auto;
     width:100%;
     text-align:center;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    margin: 0px 0px 20px 0px;
+    background: #E0F3FD;
 }
 .topnav     a{
-    padding:3px 3px;
-    margin: 10px 10px;
+    margin: 10px 10px 10px 10px;
     color: black;
 }
 
 aside.ads1 {
     float:left;
-    margin: 0 auto;
+    margin:0 auto;
     width: 25%;
     height: 30%;
 }
 
-#ad2{
-    margin-top:40px;
+.ads1 img{
+    width:90%;
+    height: auto;
+    margin: 0 5%;
 }
-/*toimiiko?*/
+
+#ad2{
+    margin-top:10%;
+}
+
 aside.ads2 {
     float:right;
     margin:0 auto;
@@ -54,22 +65,15 @@ aside.ads2 {
     height: 30%;
 }
 
-.ads1 img {
-    width:90%;
-    height: auto;
-    margin: 0px 20px;
-    position:relative;
-}
 .ads2 img{
     width:90%;
     height: auto;
-    margin: 0px 20px;
-    position:relative;
+    margin: 0 5%;
+}
+#ad4{
+    margin-top:10%;
 }
 
-#ad4{
-    margin-top:40px;
-}
 
 article.main {
     display: block;
@@ -82,9 +86,8 @@ article.main {
 .currencyInput {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    margin-top:150px;
+    width: 40%;
+    margin-top:50px;
 }
 
 
@@ -93,55 +96,49 @@ article.main {
     margin-left:20px;
     margin-right:20px;
     height:25px;
+    max-height: 100%;
 }
 
+#result{
+    width:10%;
+    background:white;
+}
 /*convertbutton*/
 #convert {
-    width: 15%;
+    width: 10%;
     margin: 30px 0px;
     height: 25px;
-    margin-top:40px;
-}
-
-#result {
-    color: white;
-    margin-top: 20px;
 }
 
 #swap {
     image-rendering: auto;
     width: 10%;
     height: 25px;
-    margin-top:40px;
     background-color: white;
 }
 
 #cash_to_be_converted {
-    margin: 0 auto;
     margin-top: 40px;
     border: none;
     padding: 20px 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 15px;
-    width: 290px;
+    width: 60%;
     box-shadow: 0px 1px 5px rgb(97,97,97);
 }
 
-.video {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-}
+
 
 footer {
     heigth:10%;
     width:100%;
-    margin:0;
+    margin:0 auto;
     background: #FFFFFF;
 }
-
-
+#map{
+    margin-top:20px;
+}
 
 a {
         display: inline-block;
@@ -162,20 +159,7 @@ a:hover:after {
         width: 85%;
         background: #3a3937;
     }
-#result {
-    text-align: center;
-}
-time p {
-    text-align: center;
-    position: center;
-    margin: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    background: #B5E2FA;
-    width: 300px;
-    flex-wrap: wrap;
-}
+
 
 @media only screen and (max-width: 600px) {
     article.main {
@@ -185,6 +169,6 @@ time p {
         display: none;
     }
     aside.ads2{
-        width:50%;
+        width:100%;
     }
 }

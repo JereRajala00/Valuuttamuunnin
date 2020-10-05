@@ -76,7 +76,7 @@ function convert(selectedValue) {
   if (selectedValue == selectedValue2) {
     res = Math.round(sum * 100) / 100;
   } else {
-    res = sum * parseFloat(currencyData.rates[selectedValue2]);
+    res = sum * parseFloat(currencyData.rates[selectedValue2]) ;
   }
 
   result.innerText = Math.round(res * 100) / 100 + ' ' +  selectedValue2;
