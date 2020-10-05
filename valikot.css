@@ -1,46 +1,84 @@
 *{
-    margin : 0;
+    margin : 0 auto;
     padding : 0;
-    box-sizing: border-box;
+
 }
 
 .container{
+    width:100%;
+    height:auto;
     display:flex;
     flex-wrap:wrap;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 header {
-    text-align: center;
-    font-size: 35px;
-    color:white;
-    background: url('kuva.jpg');
-    background-size: cover;
-    height: 200px;
+    overflow:hidden;
     width:100%;
+    height:auto;
+    margin:0 auto;
+}
+header img {
+    height:auto;
+    width:100%;
+    margin-left:50%;
+    transform: translateX(-50%);
+    background-color: #B5E2FA;
 }
 
-header p {
-    margin-top: 130px;
-    font-size: 14px;
+.topnav{
+    height:auto;
+    width:100%;
+    text-align:center;
+}
+.topnav     a{
+    padding:3px 3px;
+    margin: 10px 10px;
+    color: black;
 }
 
-article.commercials1 {
-        width:25%;
-        background: url("eimainoksia.png");
+aside.ads1 {
+    float:left;
+    margin: 0 auto;
+    width: 25%;
+    height: 30%;
+}
+
+#ad2{
+    margin-top:40px;
+}
+/*toimiiko?*/
+aside.ads2 {
+    float:right;
+    margin:0 auto;
+    width: 25%;
+    height: 30%;
+}
+
+.ads1 img {
+    width:90%;
+    height: auto;
+    margin: 0px 20px;
+    position:relative;
+}
+.ads2 img{
+    width:90%;
+    height: auto;
+    margin: 0px 20px;
+    position:relative;
+}
+
+#ad4{
+    margin-top:40px;
 }
 
 article.main {
-    height:600px;
-    width:50%;
-    background-color: #3a3937;
     display: block;
+    height:auto;
+    width:50%;
+    background-color: #272932;
     text-align:center;
 }
 
-article.commercials2 {
-        width:25%;
-        background: url("eimainoksia.png");
-}
 .currencyInput {
     display: flex;
     flex-direction: column;
@@ -59,15 +97,22 @@ article.commercials2 {
 
 /*convertbutton*/
 #convert {
-    width: 10%;
+    width: 15%;
     margin: 30px 0px;
     height: 25px;
+    margin-top:40px;
+}
+
+#result {
+    color: white;
+    margin-top: 20px;
 }
 
 #swap {
     image-rendering: auto;
     width: 10%;
     height: 25px;
+    margin-top:40px;
     background-color: white;
 }
 
@@ -96,6 +141,8 @@ footer {
     background: #FFFFFF;
 }
 
+
+
 a {
         display: inline-block;
         position: relative;
@@ -117,4 +164,27 @@ a:hover:after {
     }
 #result {
     text-align: center;
+}
+time p {
+    text-align: center;
+    position: center;
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: #B5E2FA;
+    width: 300px;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+    article.main {
+        width:100%;
+    }
+    .ads1 img{
+        display: none;
+    }
+    aside.ads2{
+        width:50%;
+    }
 }
