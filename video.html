@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <title>Video</title>
     <link rel="stylesheet" href="valikot.css">
+    <style>
+        .links {
+           /* <!--width: 100%;*/
+            text-align: center;
+        }
+        .links a {
+            border-radius: 25px;
+            margin: 30px;
+            text-align:center;
+            border: 7px solid lightblue;
+            background: deepskyblue;
+            padding: 10px;
+            color: white;
+        }
+        .video {
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+        .video p {
+            margin-top: 30px;
+        }
+        .center {
+            max-width: 75%;
+        }
+    </style>
 </head>
 <body>
 <main class="container">
@@ -20,10 +46,33 @@
     </nav>
 
     <article class="video">
-        <video width="800px" height="480px" controls>
-            <source id="mp4" src="video.mp4" type="video/mp4">
+        <nav class="links">
+            <a onclick="changeVid('Jere')">Jere</a>
+            <a onclick="changeVid('Tiitus')">Tiitus</a>
+            <a onclick="changeVid('Aleksi')">Aleksi</a>
+        </nav>
+        <h1 id ="vidmaker">Video: Jere</h1>
+        <video class="center" width="800px" height="480px" controls>
+            <source id="mp4" src="video_Jere.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        <p>Tässä median kurssissa tekemämme videot. Sivun latautuessa avautuu Jeren video. Paina ylhäältä linkkiä niin video vaihtuu toisen tekijän videoksi.</p>
+        <script>
+          //Thanks Hakan Fıstık from Stackoverflow https://stackoverflow.com/a/18454389
+            const src = document.querySelector("source");
+            const vid = document.querySelector("video");
+            const mak = document.getElementById("vidmaker");
+            //changes the video according to which link is clicked
+            function changeVid(video) {
+              setTimeout(function() {
+                vid.pause();
+                vid.setAttribute('src','video_' + video + '.mp4');
+                mak.innerText = 'Video: ' + video;
+                vid.load();
+                vid.play();
+              }, 3000);
+            }
+        </script>
     </article>
 </main>
 </body>

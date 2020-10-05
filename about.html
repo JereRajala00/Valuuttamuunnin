@@ -101,6 +101,9 @@
       const alertText = document.getElementById('alertText');
       alertText.innerText = 'Sijaintia ei saatu. Salli sijainnin antaminen.'
     }
+    else {
+      alertText.innerText = 'Virhe kartan lataamisessa. Yritä ladata sivu uudestaan.'
+    }
   }
 
   navigator.geolocation.getCurrentPosition(openMap, error, options);

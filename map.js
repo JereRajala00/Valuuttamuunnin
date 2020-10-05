@@ -34,7 +34,6 @@ function setLocations(locationData) {
           markers[i] = new L.marker(location).addTo(map).
               bindPopup(locationData[i].name + ', currency: ' + locationData[i].currencies[0].name + ', code: ' + locationData[i].currencies[0].code + ',symbol: ' + locationData[i].currencies[0].symbol)
         }, 100);
-
       } catch (error) {
         console.log(error);
       }
