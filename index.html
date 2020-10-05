@@ -13,7 +13,9 @@
 <main class="container">
 
      <header>
-         <img src="logo1.png">
+         <a href="index.html">
+         <img src="logo1.png" class="center">
+         </a>
      </header>
 
     <nav class="topnav">
@@ -42,7 +44,7 @@
             <option>EUR</option>
         </select>
 
-        <p id="result" align="center"></p>
+        <p id="result" align="center" class="hidden">0</p>
         <div class="button">
             <button id="convert">Convert</button>
         </div>
@@ -80,7 +82,7 @@
                 const p = document.querySelector('#kello');
                 function updateTime() {
                     time = new Date();
-                    p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty:" + currencyData.date;
+                    p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty: " + currencyData.date;
                 }
                 setInterval(updateTime, 1000);
             </script>

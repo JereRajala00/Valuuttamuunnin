@@ -52,7 +52,7 @@ async function getRates() {
     console.log(error);
   }
 }
-//this functions converts currency after newest rates is fetch and sets the result
+//this function converts currency after newest rates is fetch and sets the result
 function convert(selectedValue) {
   var inputField = getSelectedMenuOption()[0];
   var sum = parseFloat(inputField.value);
@@ -72,7 +72,7 @@ function convert(selectedValue) {
     res = sum * parseFloat(currencyData.rates[selectedValue2]);
   }
 
-  result.innerText = Math.round(res * 100) / 100;
+  result.innerText = Math.round(res * 100) / 100 + ' ' +  selectedValue2;
 }
 //this function adds all currencies included in the API to the dropdown menus
 function addCurrencies() {
