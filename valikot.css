@@ -1,54 +1,82 @@
 *{
-    margin : 0;
+    margin : 0 auto;
     padding : 0;
-    box-sizing: border-box;
+
 }
 
 .container{
+    width:100%;
+    height:auto;
     display:flex;
     flex-wrap:wrap;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 header {
-    text-align: center;
-    font-size: 35px;
-    color:white;
-    background: url('kuva.jpg');
-    background-size: cover;
-    width: 100%;
-    height: auto;
+    overflow:hidden;
+    width:100%;
+    height:auto;
+    margin:0 auto;
+}
+header img {
+    height:auto;
+    width:100%;
+    margin-left:50%;
+    transform: translateX(-50%);
+    background-color: #B5E2FA;
 }
 
-header p {
-    margin-top: 130px;
-    font-size: 14px;
-}
 .topnav{
+    height:auto;
     width:100%;
     text-align:center;
 }
 .topnav     a{
+    padding:3px 3px;
     margin: 10px 10px;
     color: black;
 }
 
-aside.commercials1 {
-        width:25%;
-        background: url("eimainoksia.png");
+aside.ads1 {
+    float:left;
+    margin:0 auto;
+    width: 25%;
+    height: 30%;
+}
+
+aside img{
+    width:90%;
+    height: auto;
+    margin: 0px 30px;
+}
+#ad2{
+    margin-top:40px;
+}
+/*toimiiko?*/
+aside.ads2 {
+    float:right;
+    margin:0 auto;
+    width: 25%;
+    height: 30%;
+}
+
+.ads2 img{
+    width:90%;
+    height: auto;
+    margin: 0px 20px;
+}
+
+#ad4{
+    margin-top:40px;
 }
 
 article.main {
-    height:600px;
-    width:50%;
-    background-color: #3a3937;
     display: block;
+    height:auto;
+    width:50%;
+    background-color: #272932;
     text-align:center;
 }
 
-aside.commercials2 {
-        width:25%;
-        background: url("eimainoksia.png");
-}
 .currencyInput {
     display: flex;
     flex-direction: column;

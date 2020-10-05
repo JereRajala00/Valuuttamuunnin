@@ -91,3 +91,13 @@ function addCurrencies() {
     dropdownmenu2.appendChild(new_option2);
   }
 }
+// Get data from currencyData-variable with syntax: currencyData.rates['USD']
+
+/*SWAP BUTTON*/
+swap = document.getElementById("swap");
+swap.addEventListener("click", swap_currencies);
+
+function swap_currencies(evt){
+  alert("moro");
+}
+/*SWAP BUTTON*/
