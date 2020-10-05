@@ -1,7 +1,6 @@
 *{
     margin : 0 auto;
     padding : 0;
-
 }
 
 .container{
@@ -43,7 +42,7 @@ aside.ads1 {
     height: 30%;
 }
 
-aside img{
+.ads1 img{
     width:90%;
     height: auto;
     margin: 0px 30px;
@@ -51,7 +50,7 @@ aside img{
 #ad2{
     margin-top:40px;
 }
-/*toimiiko?*/
+
 aside.ads2 {
     float:right;
     margin:0 auto;
@@ -62,7 +61,7 @@ aside.ads2 {
 .ads2 img{
     width:90%;
     height: auto;
-    margin: 0px 20px;
+    margin: 0px 30px;
 }
 
 #ad4{
@@ -80,9 +79,8 @@ article.main {
 .currencyInput {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    margin-top:150px;
+    width: 40%;
+    margin-top:50px;
 }
 
 
@@ -91,8 +89,13 @@ article.main {
     margin-left:20px;
     margin-right:20px;
     height:25px;
+    max-height: 100%;
 }
 
+#result{
+    width:10%;
+    background:white;
+}
 /*convertbutton*/
 #convert {
     width: 10%;
@@ -108,14 +111,13 @@ article.main {
 }
 
 #cash_to_be_converted {
-    margin: 0 auto;
     margin-top: 40px;
     border: none;
     padding: 20px 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 15px;
-    width: 290px;
+    width: 60%;
     box-shadow: 0px 1px 5px rgb(97,97,97);
 }
 
@@ -151,3 +153,16 @@ a:hover:after {
         width: 85%;
         background: #3a3937;
     }
+
+
+@media only screen and (max-width: 600px) {
+    article.main {
+        width:100%;
+    }
+    .ads1 img{
+        display: none;
+    }
+    aside.ads2{
+        width:100%;
+    }
+}
