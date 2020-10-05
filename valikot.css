@@ -161,6 +161,17 @@ a:hover:after {
     }
 
 
+time p {
+    text-align: center;
+    position: center;
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: #B5E2FA;
+    width: 300px;
+    flex-wrap: wrap;
+}
 @media only screen and (max-width: 600px) {
     article.main {
         width:100%;
