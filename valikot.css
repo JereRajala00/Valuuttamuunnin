@@ -3,15 +3,15 @@
     padding : 0;
     font-family: Arial;
 }
-
-.container{
+/* Main container */
+.container {
     width:100%;
     height:auto;
     display:flex;
     flex-wrap:wrap;
     margin: 0 auto;
 }
-
+/* Logo header */
 header {
     overflow:hidden;
     width:100%;
@@ -19,7 +19,7 @@ header {
     margin:0 auto;
     background-color: #B5E2FA;
 }
-
+/* Logo */
 header img {
     height:auto;
     width:15%;
@@ -27,8 +27,8 @@ header img {
     transform: translateX(-50%);
     background-color: #B5E2FA;
 }
-
-.topnav{
+/* Top navigation */
+.topnav {
     height:auto;
     width:100%;
     text-align:center;
@@ -37,45 +37,42 @@ header img {
     margin: 0px 0px 20px 0px;
     background: #E0F3FD;
 }
-.topnav     a{
+/* Top navigation links*/
+.topnav a {
     margin: 10px 10px 10px 10px;
     color: black;
 }
-
+/* Left ads */
 aside.ads1 {
     float:left;
     margin:0 auto;
     width: 25%;
     height: 30%;
 }
-
-.ads1 img{
+/* Images in left ads */
+.ads1 img {
     width:90%;
     height: auto;
     margin: 0 5%;
 }
-
-#ad2{
+/* Bottom ads */
+#ad2, #ad4 {
     margin-top:10%;
 }
-
+/* Right ads */
 aside.ads2 {
     float:right;
     margin:0 auto;
     width: 25%;
     height: 30%;
 }
-
-.ads2 img{
+/* Right ads images */
+.ads2 img {
     width:90%;
     height: auto;
     margin: 0 5%;
 }
-#ad4{
-    margin-top:10%;
-}
-
-
+/* Converter "box" */
 article.main {
     display: block;
     height:auto;
@@ -83,42 +80,40 @@ article.main {
     background-color: #272932;
     text-align:center;
 }
-
+/* Input field container */
 .currencyInput {
     display: flex;
     flex-direction: column;
     width: 40%;
     margin-top:50px;
 }
-
-
-#dropdown_menu1, #dropdown_menu2  {
+/* Dropdown menus */
+#dropdown_menu1, #dropdown_menu2 {
     margin-top:40px;
     margin-left:20px;
     margin-right:20px;
     height:25px;
     max-height: 100%;
 }
-
-#result{
+/* Result text */
+#result {
     width:10%;
     background:white;
 }
-
 /*convertbutton*/
 #convert {
     width: 10%;
     margin: 30px 0px;
     height: 25px;
 }
-
+/* Swap button (swaps between first currency selection and second) */
 #swap {
     image-rendering: auto;
     width: 10%;
     height: 25px;
     background-color: white;
 }
-
+/* Input field */
 #cash_to_be_converted {
     margin-top: 40px;
     border: none;
@@ -129,30 +124,25 @@ article.main {
     width: 60%;
     box-shadow: 0px 1px 5px rgb(97,97,97);
 }
-
-#currencySelectors {
-    flex-wrap: nowrap;
-
-}
-
+/* Footer, contains map and dates */
 footer {
     heigth:10%;
     width:100%;
     margin:0 auto;
     background: #FFFFFF;
 }
-
-#map{
+/* Map, shows currencies for almost every country */
+#map {
     margin-top:20px;
 }
-
+/* Link style */
 a {
         display: inline-block;
         position: relative;
         padding-bottom: 3px;
         text-decoration: none;
 }
-
+/* Link bottom style */
 a:after {
         content: '';
         display: block;
@@ -162,13 +152,13 @@ a:after {
         background: transparent;
         transition: width .5s ease, background-color .5s ease;
     }
-
+/* Link hover effect */
 a:hover:after {
         width: 85%;
         background: #3a3937;
-    }
-
-time p {
+}
+/* Dates */
+.date p {
     text-align: center;
     position: center;
     margin: 30px;
@@ -179,6 +169,7 @@ time p {
     width: 300px;
     flex-wrap: wrap;
 }
+/* Media queries, used if window is narrow */
 @media only screen and (max-width: 600px) {
     article.main {
         width:100%;
