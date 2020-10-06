@@ -22,6 +22,13 @@ function getSelectedMenuOption() {
   return menuOptions;
 }
 //this function gets currency rates from exchangeratesapi.io api
+function swap() {
+  var currency1 = document.getElementById('dropdown_menu1');
+  var currency2 = document.getElementById('dropdown_menu2');
+  var firstValue = currency1.options[currency1.selectedIndex];
+  currency1.options[currency1.selectedIndex] = currency2.options[currency2.selectedIndex];
+  currency2.options[currency2.selectedIndex] = firstValue;
+}
 async function getRates() {
   var menuOption = getSelectedMenuOption();
   var selectedValue = menuOption[2];
@@ -52,7 +59,7 @@ async function getRates() {
     console.log(error);
   }
 }
-//this functions converts currency after newest rates is fetch and sets the result
+//this function converts currency after newest rates is fetch and sets the result
 function convert(selectedValue) {
   var inputField = getSelectedMenuOption()[0];
   var sum = parseFloat(inputField.value);
@@ -72,7 +79,7 @@ function convert(selectedValue) {
     res = sum * parseFloat(currencyData.rates[selectedValue2]) ;
   }
 
-  result.innerText = Math.round(res * 100) / 100;
+  result.innerText = Math.round(res * 100) / 100 + ' ' +  selectedValue2;
 }
 //this function adds all currencies included in the API to the dropdown menus
 function addCurrencies() {
@@ -92,12 +99,3 @@ function addCurrencies() {
   }
 }
 // Get data from currencyData-variable with syntax: currencyData.rates['USD']
-
-/*SWAP BUTTON*/
-swap = document.getElementById("swap");
-swap.addEventListener("click", swap_currencies);
-
-function swap_currencies(evt){
-  alert("moro");
-}
-/*SWAP BUTTON*/

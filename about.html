@@ -1,3 +1,4 @@
+<!-- Author of this page is Tiitus. This page shows rounting from user location to Metropolia Karamalmi Campus in Espoo -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +8,45 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="valikot.css">
     <style>
         .map {
-            position: absolute;
-            width: 50%;
-            height: 50%;
+            height: 500px;
+            width: auto;
+            margin: 50px;
         }
+        main h1 {
+            margin: 50px;
+            color: white;
+        }
+        main p {
+            margin:50px;
+            color: white;
+        }
+
     </style>
 </head>
-<header></header>
 <body>
+<main class="container">
+
+    <header>
+        <img src="logo1.png">
+    </header>
+
+    <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="video.html">Video</a>
+        <a href="videosuunnittelu.pdf" target="_blank">Videon suunnitelma</a>
+        <a href="about.html">Kartta</a>
+        <a class="author-images" href="https://drive.google.com/drive/folders/1B7nIp75S04kYocH-3qWKQtavI91Yddia?usp=sharing">Kehittäjien kuvat</a>
+    </nav>
+    <aside class="ads1">
+        <img id="ad1" src="mainos1.png">
+        <img id="ad2" src="mainos2.png">
+    </aside>
+    <article class="main">
 <h1>Näin pääset Metropolian Karamalmin toimipisteelle:</h1>
+
 <p style = "margin-top: 30px;" id = alertText></p>
 <div id="map" class="map">
 <script>
@@ -31,7 +60,7 @@
     const crd = pos.coords;
     var map = L.map('map');
 
-    // Tulostetaan paikkatiedot konsoliin
+    // Logs location data to console
     console.log('Your current position is:');
     console.log(`Latitude : ${crd.latitude}`);
     console.log(`Longitude: ${crd.longitude}`);
@@ -48,11 +77,11 @@
         ],
         routeWhileDragging: true,
         router: L.Routing.mapbox('pk.eyJ1IjoidGFhYW5rIiwiYSI6ImNrZm55bHV5MjJxbGEyeW8zd2kyamNucWcifQ.ZjrFICw6y2JIeQjNGQeraA'),
-        //geocoder: L.Control.Geocoder.nominatim()
     }).addTo(map);
   }
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
+    //if user denies to give location, Sets routing from Helsinki Center to metropolia Karamalmi campus
     if (err = 'User denied Geolocation') {
       var map = L.map('map');
       alert("Sijaintia ei saatu. Salli selaimessasi sijainnin antaminen.");
@@ -67,16 +96,26 @@
         ],
         routeWhileDragging: true,
         router: L.Routing.mapbox('pk.eyJ1IjoidGFhYW5rIiwiYSI6ImNrZm55bHV5MjJxbGEyeW8zd2kyamNucWcifQ.ZjrFICw6y2JIeQjNGQeraA'),
-        //geocoder: L.Control.Geocoder.nominatim()
+
       }).addTo(map);
       const alertText = document.getElementById('alertText');
       alertText.innerText = 'Sijaintia ei saatu. Salli sijainnin antaminen.'
     }
+    else {
+      alertText.innerText = 'Virhe kartan lataamisessa. Yritä ladata sivu uudestaan.'
+    }
   }
 
   navigator.geolocation.getCurrentPosition(openMap, error, options);
-</script>
 
+</script>
 </div>
+        <p>Tämän sivuston on luonut yhdessä Metropolia Ammattikorkeakoulun Karamalmin toimipisteessä opiskelevat Tieto- ja viestintätekniikan insinööriopiskelijat Aleksi Kytö, Jere Rajala ja Tiitus Telke 1. vuoden Web-tekniikat ja digitaalinen media -opintojakson projektityönä.</p>
+        </article>
+        <aside class="ads2">
+            <img id="ad3" src="mainos1.png">
+            <img id="ad4" src="mainos2.png">
+        </aside>
+</main>
 </body>
 </html>

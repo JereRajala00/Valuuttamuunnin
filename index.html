@@ -21,6 +21,7 @@
         <a href="video.html">Video</a>
         <a href="videosuunnittelu.pdf" target="_blank">Videon suunnitelma</a>
         <a href="about.html">Kartta</a>
+        <a class="author-images" href="https://drive.google.com/drive/folders/1B7nIp75S04kYocH-3qWKQtavI91Yddia?usp=sharing">Kehittäjien kuvat</a>
     </nav>
 
     <aside class="ads1">
@@ -33,21 +34,27 @@
         <div class="currencyInput">
             <input id="cash_to_be_converted" type="number" placeholder="EUR">
         </div>
-        <select name="first_currency" id="dropdown_menu1" onchange="updatePlaceholder()">
-            <option></option>
-        </select>
 
-        <button id="swap" onclick="swap_currencies()"><img src="swapmini.png"> </button>
+        <div class="row1">
 
-        <select name="second_currency" id="dropdown_menu2">
-            <option></option>
-        </select>
+            <select name="first_currency" id="dropdown_menu1" onchange="updatePlaceholder()">
+                <option>EUR</option>
+            </select>
 
-        <div class="button">
-            <button id="convert">Convert</button>
+            <button id="swap" onclick="swap()"><img src="swapmini.png"> </button>
+
+            <select name="second_currency" id="dropdown_menu2">
+                <option>EUR</option>
+            </select>
         </div>
 
-        <p id="result" align="center"></p>
+
+        <div class="cbutton">
+                <button id="convert">Convert</button>
+        </div>
+
+            <p id="info">Muunnettu rahamäärä = </p>
+            <p id="result" align="center" class="hidden">0</p>
 
     </article>
 
@@ -73,7 +80,7 @@
                 const p = document.querySelector('#kello');
                 function updateTime() {
                     time = new Date();
-                    p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty:" + currencyData.date;
+                    p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty: " + currencyData.date;
                 }
                 setInterval(updateTime, 1000);
             </script>
