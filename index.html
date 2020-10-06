@@ -47,13 +47,11 @@
                 </select>
             </span>
         </div>
-
         <div class="cbutton">
             <button id="convert">Convert</button>
         </div>
-            <div style="height: 150px;">
-                <p id="info">Muunnettu rahamäärä =</p>
-                <p id="result" align="center">0</p>
+            <div id="result" style="height: 150px;">
+                <p align="center">0</p>
             </div>
     </article>
 
@@ -75,13 +73,20 @@
     <div class="date">
         <p id="kello">
             <script>
+              try {
                 let time;
                 const p = document.querySelector('#kello');
+
                 function updateTime() {
-                    time = new Date();
-                    p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty: " + currencyData.date;
+                  time = new Date();
+                  p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty: " +
+                      currencyData.date;
                 }
+
                 setInterval(updateTime, 1000);
+              } catch (err) {
+                console.log(err);
+              }
             </script>
         </p>
     </div>

@@ -49,9 +49,8 @@ async function getRates() {
       currencyData = await response.json();   //sets data from api to a global variable
 
       console.log(currencyData);
-
       var sum = menuOption[0].value;      //gets number from input field
-      console.log(sum.length);
+
       if (sum.length > 0) {
         convert(selectedValue);
       }
@@ -81,7 +80,7 @@ function convert(selectedValue) {
     res = sum * parseFloat(currencyData.rates[selectedValue2]) ;
   }
 
-  result.innerText = Math.round(res * 100) / 100 + ' ' +  selectedValue2;
+  result.innerHTML = sum + ' ' + selectedValue + '<br>=<br>' + Math.round(res * 100) / 100 + ' ' +  selectedValue2;
 }
 //this function adds all currencies included in the API to the dropdown menus
 function addCurrencies() {

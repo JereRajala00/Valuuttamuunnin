@@ -113,12 +113,15 @@ article.main {
     horiz-align: center;
 }
 /* Result text */
-#result{
+#result {
     text-align: center;
-    width:10%;
+    width:100%;
     color:white;
     font-size:42px;
-    visibility:hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 #info {
