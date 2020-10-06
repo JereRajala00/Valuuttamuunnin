@@ -79,8 +79,9 @@ function convert(selectedValue) {
   } else {
     res = sum * parseFloat(currencyData.rates[selectedValue2]) ;
   }
-
-  result.innerHTML = sum + ' ' + selectedValue + '<br>=<br>' + Math.round(res * 100) / 100 + ' ' +  selectedValue2;
+  const base = document.getElementById("base");
+  base.innerText = sum + ' ' + selectedValue;
+  result.innerHTML =  Math.round(res * 100) / 100 + ' ' +  selectedValue2;
 }
 //this function adds all currencies included in the API to the dropdown menus
 function addCurrencies() {
