@@ -99,6 +99,7 @@ article.main {
 #result {
     width:10%;
     background:white;
+    text-align: center;
 }
 /*convertbutton*/
 #convert {
