@@ -21,18 +21,19 @@ function getSelectedMenuOption() {
   var menuOptions = [inputField, currency1, selectedValue]
   return menuOptions;
 }
+//this function swaps dropdownmenu selectors between them
+$("#swap").click(function() {
+  var row = $(this).closest("#currencySelectors");
+  var start = row.find("span.currencies:first select");
+  var end = row.find("span.currencies:last select");
+  var temp = start.val();
+  start.val(end.val());
+  end.val(temp);
+});
 //this function gets currency rates from exchangeratesapi.io api
-function swap() {
-  var currency1 = document.getElementById('dropdown_menu1');
-  var currency2 = document.getElementById('dropdown_menu2');
-  var firstValue = currency1.options[currency1.selectedIndex];
-  currency1.options[currency1.selectedIndex] = currency2.options[currency2.selectedIndex];
-  currency2.options[currency2.selectedIndex] = firstValue;
-}
 async function getRates() {
   var menuOption = getSelectedMenuOption();
-  var selectedValue = menuOption[2];
-  menuOption[2];               //gets selected base currency
+  var selectedValue = menuOption[2];   //gets selected base currency
   console.log('Base currency: ' + selectedValue);
   let response;
   try {
