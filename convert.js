@@ -21,18 +21,20 @@ function getSelectedMenuOption() {
   var menuOptions = [inputField, currency1, selectedValue]
   return menuOptions;
 }
+//this function swaps dropdownmenu selectors between them
+$("#swap").click(function() {
+  var row = $(this).closest("#currencySelectors");
+  var start = row.find("span.currencies:first select");
+  var end = row.find("span.currencies:last select");
+  var temp = start.val();
+  start.val(end.val());
+  end.val(temp);
+  updatePlaceholder();
+});
 //this function gets currency rates from exchangeratesapi.io api
-function swap() {
-  var currency1 = document.getElementById('dropdown_menu1');
-  var currency2 = document.getElementById('dropdown_menu2');
-  var firstValue = currency1.options[currency1.selectedIndex];
-  currency1.options[currency1.selectedIndex] = currency2.options[currency2.selectedIndex];
-  currency2.options[currency2.selectedIndex] = firstValue;
-}
 async function getRates() {
   var menuOption = getSelectedMenuOption();
-  var selectedValue = menuOption[2];
-  menuOption[2];               //gets selected base currency
+  var selectedValue = menuOption[2];   //gets selected base currency
   console.log('Base currency: ' + selectedValue);
   let response;
   try {
@@ -47,9 +49,8 @@ async function getRates() {
       currencyData = await response.json();   //sets data from api to a global variable
 
       console.log(currencyData);
-
       var sum = menuOption[0].value;      //gets number from input field
-      console.log(sum.length);
+
       if (sum.length > 0) {
         convert(selectedValue);
       }
@@ -78,8 +79,9 @@ function convert(selectedValue) {
   } else {
     res = sum * parseFloat(currencyData.rates[selectedValue2]) ;
   }
-
-  result.innerText = Math.round(res * 100) / 100 + ' ' +  selectedValue2;
+  const base = document.getElementById("base");
+  base.innerText = sum + ' ' + selectedValue;
+  result.innerHTML =  Math.round(res * 100) / 100 + ' ' +  selectedValue2;
 }
 //this function adds all currencies included in the API to the dropdown menus
 function addCurrencies() {

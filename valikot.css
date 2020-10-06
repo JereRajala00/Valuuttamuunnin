@@ -3,15 +3,15 @@
     padding : 0;
     font-family: Arial;
 }
-
-.container{
+/* Main container */
+.container {
     width:100%;
     height:auto;
     display:flex;
     flex-wrap:wrap;
     margin: 0 auto;
 }
-
+/* Logo header */
 header {
     overflow:hidden;
     width:100%;
@@ -19,6 +19,7 @@ header {
     margin:0 auto;
     background-color: #96C5F7;
 }
+/* Logo */
 header img {
     height:auto;
     width:15%;
@@ -26,8 +27,8 @@ header img {
     transform: translateX(-50%);
     background-color: #96C5F7;
 }
-
-.topnav{
+/* Top navigation */
+.topnav {
     height:auto;
     width:100%;
     text-align:center;
@@ -36,47 +37,45 @@ header img {
     margin: 0px 0px 20px 0px;
     background: #F2F4FF;
 }
-.topnav     a{
+/* Top navigation links*/
+.topnav a {
     margin: 10px 10px 10px 10px;
     color: black;
 }
-
+/* Left ads */
 aside.ads1 {
     float:left;
     margin:0 auto;
     width: 25%;
     height: 30%;
-    background-color: black;
+    max-width: 940px;
 }
-
-.ads1 img{
+/* Images in left ads */
+.ads1 img {
     width:90%;
     height: auto;
+    max-width: 940px;
     margin: 0 5%;
 }
-
-#ad2{
+/* Bottom ads */
+#ad2, #ad4 {
     margin-top:10%;
 }
-
+/* Right ads */
 aside.ads2 {
     float:right;
     margin:0 auto;
     width: 25%;
-    height: 50%;
-    background-color: black;
+    height: 30%;
+    max-width: 940px;
 }
-
-.ads2 img{
+/* Right ads images */
+.ads2 img {
     width:90%;
     height: auto;
     margin: 0 5%;
 }
-#ad4{
-    margin-top:10%;
-}
-
-
+/* Converter "box" */
 article.main {
     margin: 0 auto;
     display: block;
@@ -85,31 +84,25 @@ article.main {
     background-color: #272932;
     text-align:center;
 }
-
-
-#cash_to_be_converted {
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    padding: 25px 0px;
-    width:40%;
-    max-width: 80%;
-    height:auto;
-    box-shadow: 0px 1px 5px rgb(97,97,97);
-    margin: 40px auto;
+/* Input field container */
+.currencyInput {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top:50px;
 }
-
-.row1{
+#currencySelectors {
     border: none;
     color: white;
     padding: 25px 12px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 16px;
     margin: 0 auto;
     cursor: pointer;
-    width:40%;
+    width: 40%;
 }
 
 #dropdown_menu1 {
@@ -123,7 +116,37 @@ article.main {
     height:2rem;
     horiz-align: center;
 }
+/* Result text */
+#result {
+    text-align: center;
+    width:100%;
+    color:white;
+    font-size:42px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
 
+#info {
+    text-align: center;
+    width:30%;
+    color:white;
+    font-size:22px;
+}
+.cbutton{
+    width:40%
+}
+/*convertbutton*/
+#convert {
+    width: auto;
+    margin: 20px 0px;
+    height: 35px;
+    vertical-align: center;
+    horiz-align: center;
+    text-align: center;
+}
+/* Swap button (swaps between first currency selection and second) */
 #swap {
     background:white;
     width:20%;
@@ -131,49 +154,43 @@ article.main {
     left:45%;
     right:45%;
 }
-
 #info{
     text-align: center;
     width:10%;
     color:white;
     font-size:22px;
 }
-#result{
+/* Input field */
+#cash_to_be_converted {
+    font-weight: bold;
+    font-size: 20px;
     text-align: center;
-    width:10%;
-    color:white;
-    font-size:42px;
+    padding: 25px 0px;
+    width:40%;
+    max-width: 80%;
+    height:auto;
+    box-shadow: 0px 1px 5px rgb(97,97,97);
+    margin: 40px auto;
 }
-
-/*convertbutton*/
-
-.cbutton{
-    width:40%
-}
-#convert {
-    width: 20%;
-    margin: 20px 0px;
-    height: 35px;
-    vertical-align: center;
-    horiz-align: center;
-}
-
+/* Contains map and date */
 footer {
     heigth:10%;
     width:100%;
     margin:0 auto;
     background: #FFFFFF;
 }
-#map{
+/* Map, shows currencies for almost every country */
+#map {
     margin-top:20px;
 }
-
+/* Link style */
 a {
         display: inline-block;
         position: relative;
         padding-bottom: 3px;
         text-decoration: none;
-    }
+}
+/* Link bottom style */
 a:after {
         content: '';
         display: block;
@@ -183,13 +200,13 @@ a:after {
         background: transparent;
         transition: width .5s ease, background-color .5s ease;
     }
+/* Link hover effect */
 a:hover:after {
         width: 85%;
         background: #96C5F7;
-    }
-
-
-time p {
+}
+/* Dates */
+.date p {
     text-align: center;
     position: center;
     margin: 30px;
@@ -200,15 +217,18 @@ time p {
     width: 300px;
     flex-wrap: wrap;
 }
-
-@media only screen and (max-width: 700px) {
+/* Media queries, used if window is narrow */
+@media only screen and (max-width: 1500px) {
     article.main {
         width:100%;
     }
-    .ads1 img{
+    .ads1 img {
         display: none;
     }
-    aside.ads2{
-        width:100%;
+    aside.ads2 {
+        margin-top: 30px;
+        width: 100%;
+        margin-left: auto;
+        margin-right:auto;
     }
 }

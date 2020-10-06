@@ -6,6 +6,7 @@
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
     <link rel="stylesheet" href="valikot.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Valuuttamuunnin PRO</title>
 
 </head>
@@ -13,7 +14,7 @@
 <main class="container">
 
      <header>
-         <img src="logo1.png">
+         <img src="logo1.png" alt="Valuuttamuunnin PRO">
      </header>
 
     <nav class="topnav">
@@ -25,42 +26,44 @@
     </nav>
 
     <aside class="ads1">
-        <img id="ad1" src="mainos1.png">
-        <img id="ad2" src="mainos2.png">
+        <img id="ad1" src="mainos1.png" alt="Google Shopping Guide" width="auto">
+        <img id="ad2" src="mainos2.png" alt="Amazon Native Shopping Ads">
     </aside>
 
     <article class="main">
-
         <div class="currencyInput">
             <input id="cash_to_be_converted" type="number" placeholder="EUR">
         </div>
-
-        <div class="row1">
-
-            <select name="first_currency" id="dropdown_menu1" onchange="updatePlaceholder()">
-                <option>EUR</option>
-            </select>
-
-            <button id="swap" onclick="swap()"><img src="swapmini.png"> </button>
-
-            <select name="second_currency" id="dropdown_menu2">
-                <option>EUR</option>
-            </select>
+        <div id="currencySelectors">
+            <span class="currencies">
+                <select name="first_currency" id="dropdown_menu1" onchange="updatePlaceholder()">
+                    <option>EUR</option>
+                </select>
+            </span>
+            <button id="swap"><img src="swapmini.png"> </button>
+            <span class="currencies">
+                <select name="second_currency" id="dropdown_menu2">
+                    <option>EUR</option>
+                </select>
+            </span>
         </div>
-
-
         <div class="cbutton">
-                <button id="convert">Convert</button>
+            <button id="convert">Convert</button>
         </div>
-
-            <p id="info">Muunnettu rahamäärä = </p>
-            <p id="result" align="center" class="hidden">0</p>
-
+        <div style="height: 200px">
+            <div id="info">
+                <p id="base">0</p>
+                <p><br>=<br></p>
+            </div>
+            <div id="result">
+                <p align="center">0</p>
+            </div>
+        </div>
     </article>
 
     <aside class="ads2">
-        <img id="ad3" src="mainos1.png">
-        <img id="ad4" src="mainos2.png">
+        <img id="ad3" src="mainos1.png" alt="Google Shopping Guide">
+        <img id="ad4" src="mainos2.png" alt="Amazon Native Shopping Ads">
     </aside>
 
 </main>
@@ -73,19 +76,26 @@
                 crossorigin=""></script>
         <script src="map.js"></script>
     </div>
-    <time>
+    <div class="date">
         <p id="kello">
             <script>
+              try {
                 let time;
                 const p = document.querySelector('#kello');
+
                 function updateTime() {
-                    time = new Date();
-                    p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty: " + currencyData.date;
+                  time = new Date();
+                  p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty: " +
+                      currencyData.date;
                 }
+
                 setInterval(updateTime, 1000);
+              } catch (err) {
+                console.log(err);
+              }
             </script>
         </p>
-    </time>
+    </div>
 </footer>
 
 </body>
