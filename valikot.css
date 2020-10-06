@@ -46,6 +46,7 @@ aside.ads1 {
     margin:0 auto;
     width: 25%;
     height: 30%;
+    background-color: black;
 }
 
 .ads1 img{
@@ -62,7 +63,8 @@ aside.ads2 {
     float:right;
     margin:0 auto;
     width: 25%;
-    height: 30%;
+    height: 50%;
+    background-color: black;
 }
 
 .ads2 img{
@@ -199,7 +201,7 @@ time p {
     flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     article.main {
         width:100%;
     }
