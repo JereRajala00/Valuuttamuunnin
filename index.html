@@ -34,18 +34,23 @@
         <div class="currencyInput">
             <input id="cash_to_be_converted" type="number" placeholder="EUR">
         </div>
-        <div id="currencySelectors">
-            <span class="currencies">
-                <select name="first_currency" id="dropdown_menu1" onchange="updatePlaceholder()">
-                    <option>EUR</option>
-                </select>
-            </span>
-            <button id="swap"><img src="swapmini.png"> </button>
-            <span class="currencies">
-                <select name="second_currency" id="dropdown_menu2">
-                    <option>EUR</option>
-                </select>
-            </span>
+
+        <div class="row1">
+            <div id="currencySelectors">
+                <span class="currencies">
+                    <select name="first_currency" id="dropdown_menu1" onchange="updatePlaceholder()">
+                        <option>EUR</option>
+                    </select>
+                </span>
+
+                <button id="swap"><img src="swapmini.png"> </button>
+
+                <span class="currencies">
+                    <select name="second_currency" id="dropdown_menu2">
+                        <option>EUR</option>
+                    </select>
+                </span>
+            </div>
         </div>
         <div class="cbutton">
             <button id="convert">Convert</button>
