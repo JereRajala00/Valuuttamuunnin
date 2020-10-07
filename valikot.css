@@ -132,6 +132,7 @@ aside.ads2 {
     right:45%;
 }
 #info{
+    margin-top: 30px;
     margin-bottom:0px;
     text-align: center;
     width:10%;
@@ -153,7 +154,6 @@ aside.ads2 {
 }
 /* Contains map and date */
 footer {
-    heigth:10%;
     width:100%;
     margin:0 auto;
     background: #FFFFFF;
