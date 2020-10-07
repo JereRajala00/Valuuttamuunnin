@@ -3,12 +3,10 @@
     padding : 0;
     font-family: Arial;
 }
+
 html {
-    flex-wrap: wrap;
     display: flex;
-}
-body {
-    width: 100%;
+    flex-wrap: wrap;
 }
 
 /* Main container */

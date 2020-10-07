@@ -80,10 +80,10 @@
             function changeVid(video) {
               setTimeout(function() {
                 vid.pause();
-                vid.setAttribute('src','videot/video_' + video + '.mp4');
-                mak.innerText = 'Video: ' + video;
+                src.setAttribute('src','videot/video_' + video + '.mp4');
                 vid.load();
                 vid.play();
+                mak.innerText = 'Video: ' + video;
               }, 1000);
             }
         </script>
