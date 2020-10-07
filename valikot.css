@@ -46,8 +46,6 @@ header img {
 article.main {
     margin: 0 auto;
     display: block;
-    height:100%;
-    max-height:100%;
     width:50%;
     background-color: #272932;
     text-align:center;
@@ -77,7 +75,6 @@ aside.ads2 {
     float:right;
     margin:0 auto;
     width: 25%;
-    height: 30%;
     max-width: 940px;
 }
 /* Right ads images */
@@ -118,10 +115,9 @@ aside.ads2 {
     height:2rem;
 }
 #dropdown_menu2{
-    position:relative;
     float:right;
+    margin:0 auto;
     height:2rem;
-    horiz-align: center;
 }
 /* Swap button (swaps between first currency selection and second) */
 #swap {
@@ -133,12 +129,16 @@ aside.ads2 {
 }
 
 #info{
+    margin-bottom:0px;
     text-align: center;
     width:10%;
     color:white;
     font-size:22px;
 }
+
 #result{
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     width:10%;
     color:white;
@@ -146,7 +146,6 @@ aside.ads2 {
 }
 
 /*convertbutton*/
-
 .cbutton{
     width:40%
 }
@@ -168,6 +167,7 @@ footer {
     margin-top:20px;
 }
 
+/*topnav link-effects*/
 a {
     display: inline-block;
     position: relative;
