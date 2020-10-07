@@ -10,7 +10,6 @@ html {
 /* Main container */
 .container {
     width:100%;
-    min-height: 550px;
     height:auto;
     display:flex;
     flex-wrap:wrap;
@@ -47,6 +46,14 @@ header img {
     margin: 10px 10px 10px 10px;
     color: black;
 }
+/* Converter "box" */
+article.main {
+    margin: 0 auto;
+    display: block;
+    width:50%;
+    background-color: #272932;
+    text-align:center;
+}
 /* Left ads */
 aside.ads1 {
     float:left;
@@ -81,17 +88,20 @@ aside.ads2 {
     height: auto;
     margin: 0 5%;
 }
-/* Converter "box" */
-article.main {
-    margin: 0 auto;
-    display: block;
-    height:100%;
-    max-height:100%;
-    width:50%;
-    background-color: #272932;
-    text-align:center;
+/* Input field */
+#cash_to_be_converted {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 25px 0px;
+    width:40%;
+    max-width: 80%;
+    height:auto;
+    box-shadow: 0px 1px 5px rgb(97,97,97);
+    margin: 20px auto;
 }
-.row1 {
+/*for button aligns*/
+.row1{
     border: none;
     color: white;
     padding: 25px 12px;
@@ -109,39 +119,9 @@ article.main {
     height:2rem;
 }
 #dropdown_menu2{
-    position:relative;
     float:right;
+    margin:0 auto;
     height:2rem;
-    horiz-align: center;
-}
-/* Result text */
-#result {
-    text-align: center;
-    width:100%;
-    color:white;
-    font-size:42px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-#info {
-    text-align: center;
-    width:30%;
-    color:white;
-    font-size:22px;
-}
-.cbutton{
-    width:40%
-}
-/*convertbutton*/
-#convert {
-    width: 20%;
-    margin: 20px 0px;
-    height: 35px;
-    vertical-align: center;
-    horiz-align: center;
 }
 /* Swap button (swaps between first currency selection and second) */
 #swap {
@@ -152,28 +132,24 @@ article.main {
     right:45%;
 }
 #info{
+    margin-bottom:0px;
     text-align: center;
     width:10%;
     color:white;
     font-size:22px;
 }
+
 #result {
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     width:10%;
     color:white;
     font-size:42px;
 }
-/* Input field */
-#cash_to_be_converted {
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    padding: 25px 0px;
-    width:40%;
-    max-width: 80%;
-    height:auto;
-    box-shadow: 0px 1px 5px rgb(97,97,97);
-    margin: 40px auto;
+/*convertbutton*/
+.cbutton{
+    width:40%
 }
 /* Contains map and date */
 footer {
@@ -186,27 +162,28 @@ footer {
 #map {
     margin-top:20px;
 }
-/* Link style */
+
+/*topnav link-effects*/
 a {
-        display: inline-block;
-        position: relative;
-        padding-bottom: 3px;
-        text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+    text-decoration: none;
 }
 /* Link bottom style */
 a:after {
-        content: '';
-        display: block;
-        margin: auto;
-        height: 2px;
-        width: 0px;
-        background: transparent;
-        transition: width .5s ease, background-color .5s ease;
-    }
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
 /* Link hover effect */
 a:hover:after {
-        width: 85%;
-        background: #96C5F7;
+    width: 85%;
+    background: #96C5F7;
 }
 /* Dates */
 .date p {
