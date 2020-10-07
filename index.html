@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="valikot.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <title>Valuuttamuunnin PRO</title>
+
 </head>
 <body>
 <header>
@@ -24,8 +25,12 @@
 </nav>
 <main class="container">
     <aside class="ads1">
-        <img id="ad1" src="mainos1.png" alt="Google Shopping Guide" width="auto">
-        <img id="ad2" src="mainos2.png" alt="Amazon Native Shopping Ads">
+        <div class="img1">
+            <img id="ad1" src="mainos1.png" alt="Google Shopping Guide">
+        </div>
+        <div class="img2">
+            <img id="ad2" src="mainos2.png" alt="Amazon Native Shopping Ads">
+        </div>
     </aside>
 
     <article class="main">
@@ -60,8 +65,12 @@
     </article>
 
     <aside class="ads2">
-        <img id="ad3" src="mainos1.png" alt="Google Shopping Guide">
-        <img id="ad4" src="mainos2.png" alt="Amazon Native Shopping Ads">
+        <div class="img3">
+            <img id="ad3" src="mainos1.png" alt="Google Shopping Guide">
+        </div>
+        <div class="img4">
+            <img id="ad4" src="mainos2.png" alt="Amazon Native Shopping Ads">
+        </div>
     </aside>
 
 </main>
@@ -83,7 +92,7 @@
 
                 function updateTime() {
                   time = new Date();
-                  p.innerHTML = 'Päiväys on: ' + time.toLocaleString() + '<br/>Kurssit päivitetty: ' +
+                  p.innerHTML = "Päiväys on: " + time.toLocaleString() + "<br/>Kurssit päivitetty: " +
                       currencyData.date;
                 }
 
