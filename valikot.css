@@ -10,6 +10,7 @@ html {
 /* Main container */
 .container {
     width:100%;
+    min-height: 550px;
     height:auto;
     display:flex;
     flex-wrap:wrap;
@@ -51,7 +52,7 @@ aside.ads1 {
     float:left;
     margin:0 auto;
     width: 25%;
-    height: 30%;
+    height: 100%;
     max-width: 940px;
 }
 /* Images in left ads */
@@ -71,7 +72,7 @@ aside.ads2 {
     float:right;
     margin:0 auto;
     width: 25%;
-    height: 30%;
+    height: 100%;
     max-width: 940px;
 }
 /* Right ads images */
@@ -90,13 +91,7 @@ article.main {
     background-color: #272932;
     text-align:center;
 }
-/* Input field container */
-.currencyInput {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
-#currencySelectors {
+.row1 {
     border: none;
     color: white;
     padding: 25px 12px;
