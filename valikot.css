@@ -3,7 +3,7 @@
     padding : 0;
     font-family: Arial;
 }
-
+/* Main container */
 .container{
     width:100%;
     height:auto;
@@ -11,7 +11,7 @@
     flex-wrap:wrap;
     margin: 0 auto;
 }
-
+/* Logo header */
 header {
     overflow:hidden;
     width:100%;
@@ -19,6 +19,7 @@ header {
     margin:0 auto;
     background-color: #96C5F7;
 }
+/* Logo */
 header img {
     height:auto;
     width:15%;
@@ -26,7 +27,7 @@ header img {
     transform: translateX(-50%);
     background-color: #96C5F7;
 }
-
+/* Top navigation */
 .topnav{
     height:auto;
     width:100%;
@@ -36,19 +37,12 @@ header img {
     margin: 0px 0px 20px 0px;
     background: #F2F4FF;
 }
+/* Top navigation links*/
 .topnav     a{
     margin: 10px 10px 10px 10px;
     color: black;
 }
-
-.mid{
-    width:100%;
-    height: 30rem;
-    margin:0 auto;
-    display:flex;
-    flex-wrap: wrap;
-}
-
+/* Converter "box" */
 article.main {
     margin: 0 auto;
     display: block;
@@ -58,68 +52,41 @@ article.main {
     background-color: #272932;
     text-align:center;
 }
-
+/* Left ads */
 aside.ads1 {
-    float:right;
+    float:left;
     margin:0 auto;
     width: 25%;
-    height: 100%;
-    position:relative;
+    height: 30%;
+    max-width: 940px;
 }
-
-.img1{
-    margin: 0 5%;
-    width:100%;
-    position:absolute;
-    top:0;
-}
-#ad1{
+/* Images in left ads */
+.ads1 img {
     width:90%;
     height: auto;
-}
-.img2{
+    max-width: 940px;
     margin: 0 5%;
-    width:100%;
-    position:absolute;
-    bottom:0;
 }
-#ad2{
-    width:90%;
-    height: auto;
+/* Bottom ads */
+#ad2, #ad4 {
+    margin-top:10%;
     vertical-align: bottom;
 }
-
+/* Right ads */
 aside.ads2 {
     float:right;
     margin:0 auto;
     width: 25%;
-    height: 100%;
-    position:relative;
+    height: 30%;
+    max-width: 940px;
 }
-
-.img3{
-    margin: 0 5%;
-    width:100%;
-    position:absolute;
-    top:0;
-}
-#ad3{
+/* Right ads images */
+.ads2 img {
     width:90%;
     height: auto;
-}
-.img4{
     margin: 0 5%;
-    width:100%;
-    position:absolute;
-    bottom:0;
 }
-#ad4{
-    width:90%;
-    height: auto;
-    vertical-align: bottom;
-}
-
-
+/* Input field */
 #cash_to_be_converted {
     font-weight: bold;
     font-size: 20px;
@@ -131,7 +98,7 @@ aside.ads2 {
     box-shadow: 0px 1px 5px rgb(97,97,97);
     margin: 40px auto;
 }
-
+/*for button aligns*/
 .row1{
     border: none;
     color: white;
@@ -156,7 +123,7 @@ aside.ads2 {
     height:2rem;
     horiz-align: center;
 }
-
+/* Swap button (swaps between first currency selection and second) */
 #swap {
     background:white;
     width:20%;
@@ -232,20 +199,18 @@ time p {
     flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 700px) {
+/* Media queries, used if window is narrow */
+@media only screen and (max-width: 1500px) {
     article.main {
         width:100%;
     }
-    .img1 img{
+    .ads1 img {
         display: none;
     }
-    .img2 img{
-        display: none;
-    }
-    aside.ads2{
-        width:100%;
-    }
-    #map{
-        vertical-align: bottom;
+    aside.ads2 {
+        margin-top: 30px;
+        width: 100%;
+        margin-left: auto;
+        margin-right:auto;
     }
 }
