@@ -1,14 +1,18 @@
-*{
+* {
     margin : 0 auto;
     padding : 0;
     font-family: Arial;
+}
+html {
+    flex-wrap: wrap;
+    display: flex;
 }
 /* Main container */
 .container {
     width:100%;
     height:auto;
-    display:flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+    display: flex;
     margin: 0 auto;
 }
 /* Logo header */
@@ -47,8 +51,10 @@ aside.ads1 {
     float:left;
     margin:0 auto;
     width: 25%;
-    height: 30%;
+    height: 100%;
     max-width: 940px;
+    flex-wrap: wrap;
+    display: flex;
 }
 /* Images in left ads */
 .ads1 img {
@@ -66,12 +72,14 @@ aside.ads2 {
     float:right;
     margin:0 auto;
     width: 25%;
-    height: 30%;
+    height: 100%;
     max-width: 940px;
+    flex-wrap: wrap;
+    display: flex;
 }
 /* Right ads images */
 .ads2 img {
-    width:90%;
+    width:95%;
     height: auto;
     margin: 0 5%;
 }
@@ -89,7 +97,6 @@ article.main {
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin-top:50px;
 }
 #currencySelectors {
     border: none;
