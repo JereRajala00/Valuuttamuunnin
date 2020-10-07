@@ -211,3 +211,36 @@ a:hover:after {
         margin-right:auto;
     }
 }
+/* For smartphone */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    article.main {
+        width: 100%;
+    }
+    .currencyInput {
+        width: 100%;
+        margin-top:50px;
+    }
+    #dropdown_menu1 {
+        width: 100%;
+    }
+    #dropdown_menu2 {
+        width: 100%;
+    }
+    #result {
+        width: 100%;
+    }
+    #convert {
+        width: 100%;
+    }
+    .ads1 img {
+        display: none;
+    }
+    aside.ads2 {
+        width:100%;
+    }
+    header {
+        width: 100%;
+    }
+}
