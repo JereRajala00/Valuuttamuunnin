@@ -7,6 +7,10 @@ html {
     flex-wrap: wrap;
     display: flex;
 }
+body {
+    width: 100%;
+}
+
 /* Main container */
 .container {
     width:100%;
@@ -101,7 +105,7 @@ aside.ads2 {
     margin: 20px auto;
 }
 /*for button aligns*/
-.row1{
+.row1 {
     border: none;
     color: white;
     padding: 25px 12px;
@@ -113,12 +117,15 @@ aside.ads2 {
     cursor: pointer;
     width:40%;
 }
+.currencyInput {
+    margin-top: 50px;
+}
 #dropdown_menu1 {
     float:left;
     margin:0 auto;
     height:2rem;
 }
-#dropdown_menu2{
+#dropdown_menu2 {
     float:right;
     margin:0 auto;
     height:2rem;
@@ -135,7 +142,7 @@ aside.ads2 {
     margin-top: 30px;
     margin-bottom:0px;
     text-align: center;
-    width:10%;
+    width:100%;
     color:white;
     font-size:22px;
 }
@@ -144,13 +151,18 @@ aside.ads2 {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    width:10%;
+    width:100%;
     color:white;
     font-size:42px;
 }
 /*convertbutton*/
 .cbutton{
-    width:40%
+    width:40%;
+}
+#convert {
+    width: 20%;
+    margin: 20px 0px;
+    height: 2rem;
 }
 /* Contains map and date */
 footer {
